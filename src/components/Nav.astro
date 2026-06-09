@@ -1,0 +1,258 @@
+---
+const navItems = [
+  {
+    label: 'Diensten',
+    href: '/diensten',
+    children: [
+      { label: 'Fotografie', href: '/diensten/fotografie', desc: 'Professionele bedrijfsfotografie' },
+      { label: 'Social Media', href: '/diensten/social-media', desc: 'Strategie & contentcreatie' },
+      { label: 'Websites', href: '/diensten/websites', desc: 'Op maat gemaakte websites' },
+    ]
+  },
+  { label: 'Over Peter', href: '/over' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'Contact', href: '/contact' },
+];
+---
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo">
+      <span class="logo-bel">BEL</span><span class="logo-peter">PETER</span>
+    </a>
+
+    <ul class="nav-links">
+      {navItems.map(item => (
+        <li class={item.children ? 'has-dropdown' : ''}>
+          <a href={item.href} class="nav-link">
+            {item.label}
+            {item.children && (
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            )}
+          </a>
+          {item.children && (
+            <div class="dropdown">
+              {item.children.map(child => (
+                <a href={child.href} class="dropdown-item">
+                  <span class="dropdown-label">{child.label}</span>
+                  <span class="dropdown-desc">{child.desc}</span>
+                </a>
+              ))}
+            </div>
+          )}
+        </li>
+      ))}
+    </ul>
+
+    <a href="/contact" class="btn btn-primary nav-cta">Gratis kennismaking</a>
+
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu openen">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      {navItems.map(item => (
+        <li>
+          <a href={item.href} class="mobile-link">{item.label}</a>
+          {item.children && (
+            <ul class="mobile-sub">
+              {item.children.map(child => (
+                <li><a href={child.href} class="mobile-sub-link">{child.label}</a></li>
+              ))}
+            </ul>
+          )}
+        </li>
+      ))}
+      <li><a href="/contact" class="btn btn-primary" style="margin-top:16px;width:100%;justify-content:center;">Gratis kennismaking</a></li>
+    </ul>
+  </div>
+</nav>
+
+<style>
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--white);
+  border-bottom: 1px solid var(--gray-mid);
+  height: var(--nav-height);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  height: var(--nav-height);
+  gap: 40px;
+}
+
+.nav-logo {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.4rem;
+  letter-spacing: -0.03em;
+  flex-shrink: 0;
+}
+
+.logo-bel { color: var(--teal); }
+.logo-peter { color: var(--dark); }
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 4px;
+  flex: 1;
+}
+
+.has-dropdown {
+  position: relative;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--dark);
+  border-radius: var(--radius);
+  transition: background 0.15s;
+}
+
+.nav-link:hover {
+  background: var(--gray-light);
+  color: var(--teal);
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background: var(--white);
+  border: 1px solid var(--gray-mid);
+  border-radius: var(--radius-lg);
+  padding: 8px;
+  min-width: 240px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.1);
+}
+
+.has-dropdown:hover .dropdown {
+  display: block;
+}
+
+.dropdown-item {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 14px;
+  border-radius: var(--radius);
+  transition: background 0.15s;
+}
+
+.dropdown-item:hover {
+  background: var(--gray-light);
+}
+
+.dropdown-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--dark);
+}
+
+.dropdown-desc {
+  font-size: 0.8rem;
+  color: var(--gray-text);
+  margin-top: 2px;
+}
+
+.nav-cta {
+  margin-left: auto;
+  flex-shrink: 0;
+  font-size: 0.875rem;
+  padding: 10px 20px;
+}
+
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  margin-left: auto;
+}
+
+.nav-hamburger span {
+  width: 24px;
+  height: 2px;
+  background: var(--dark);
+  border-radius: 2px;
+  transition: all 0.2s;
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: var(--nav-height);
+  left: 0;
+  right: 0;
+  background: var(--white);
+  border-bottom: 1px solid var(--gray-mid);
+  padding: 20px 24px;
+}
+
+.mobile-menu.open {
+  display: block;
+}
+
+.mobile-menu ul {
+  list-style: none;
+}
+
+.mobile-link {
+  display: block;
+  padding: 12px 0;
+  font-weight: 600;
+  font-size: 1rem;
+  border-bottom: 1px solid var(--gray-light);
+  color: var(--dark);
+}
+
+.mobile-sub {
+  padding-left: 16px;
+  margin-bottom: 8px;
+}
+
+.mobile-sub-link {
+  display: block;
+  padding: 8px 0;
+  font-size: 0.9rem;
+  color: var(--gray-text);
+}
+
+@media (max-width: 900px) {
+  .nav-links, .nav-cta {
+    display: none;
+  }
+  .nav-hamburger {
+    display: flex;
+  }
+  .nav {
+    position: sticky;
+  }
+}
+</style>
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+hamburger?.addEventListener('click', () => {
+  mobileMenu?.classList.toggle('open');
+});
+</script>

@@ -1,0 +1,256 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Contact — Bel Peter | Gratis Kennismaking"
+  description="Neem contact op met Peter voor een gratis kennismaking. Stel je vraag of vraag een offerte aan voor fotografie, social media of een website."
+>
+
+  <section class="contact-hero">
+    <div class="container">
+      <span class="tag">Contact</span>
+      <h1>Laten we kennismaken</h1>
+      <p>Stel je vraag, vraag een offerte aan of plan een gratis kennismaking. Peter reageert doorgaans binnen 24 uur.</p>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-inner">
+
+        <div class="contact-form-wrap">
+          <h2>Stuur een bericht</h2>
+          <p class="form-sub">Vul het formulier in en Peter neemt contact met je op.</p>
+
+          <form class="contact-form" action="/bedankt" method="post">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="naam">Naam *</label>
+                <input type="text" id="naam" name="naam" placeholder="Jouw naam" required />
+              </div>
+              <div class="form-group">
+                <label for="bedrijf">Bedrijfsnaam</label>
+                <input type="text" id="bedrijf" name="bedrijf" placeholder="Jouw bedrijf" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">E-mailadres *</label>
+              <input type="email" id="email" name="email" placeholder="jouw@email.nl" required />
+            </div>
+            <div class="form-group">
+              <label for="telefoon">Telefoonnummer</label>
+              <input type="tel" id="telefoon" name="telefoon" placeholder="+31 6 00 000 000" />
+            </div>
+            <div class="form-group">
+              <label for="dienst">Ik ben geïnteresseerd in</label>
+              <select id="dienst" name="dienst">
+                <option value="">Maak een keuze</option>
+                <option value="fotografie">Fotografie</option>
+                <option value="social-media">Social Media</option>
+                <option value="website">Website</option>
+                <option value="combi">Combinatie / alles</option>
+                <option value="weet-nog-niet">Weet ik nog niet</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="bericht">Bericht *</label>
+              <textarea id="bericht" name="bericht" rows="5" placeholder="Vertel iets over jouw bedrijf en wat je wil bereiken..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary submit-btn">
+              Verstuur bericht
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </button>
+          </form>
+        </div>
+
+        <div class="contact-info">
+          <h2>Of neem direct contact op</h2>
+
+          <div class="contact-items">
+            <a href="mailto:peter@belpeter.nl" class="contact-item">
+              <div class="contact-item-icon">✉️</div>
+              <div>
+                <strong>E-mail</strong>
+                <span>peter@belpeter.nl</span>
+              </div>
+            </a>
+            <a href="tel:+31600000000" class="contact-item">
+              <div class="contact-item-icon">📞</div>
+              <div>
+                <strong>Telefoon</strong>
+                <span>+31 6 00 000 000</span>
+              </div>
+            </a>
+            <div class="contact-item">
+              <div class="contact-item-icon">📍</div>
+              <div>
+                <strong>Werkgebied</strong>
+                <span>Heel Nederland</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">⏰</div>
+              <div>
+                <strong>Reactietijd</strong>
+                <span>Binnen 24 uur</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-social">
+            <h3>Volg Peter</h3>
+            <div class="social-links">
+              <a href="https://instagram.com/belpeter.nl" target="_blank" rel="noopener" class="social-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <rect x="2" y="2" width="20" height="20" rx="5"/>
+                  <circle cx="12" cy="12" r="4"/>
+                  <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
+                </svg>
+                Instagram
+              </a>
+              <a href="https://linkedin.com/in/belpeter" target="_blank" rel="noopener" class="social-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                  <rect x="2" y="9" width="4" height="12"/>
+                  <circle cx="4" cy="4" r="2"/>
+                </svg>
+                LinkedIn
+              </a>
+            </div>
+          </div>
+
+          <div class="kennismaking-card">
+            <h3>Liever direct afspreken?</h3>
+            <p>Plan een gratis kennismaking van 30 minuten. Geen verplichtingen, gewoon een goed gesprek over jouw wensen.</p>
+            <a href="mailto:peter@belpeter.nl?subject=Kennismaking aanvragen" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:16px;">
+              Kennismaking plannen
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+.contact-hero {
+  background: var(--dark);
+  color: var(--white);
+  padding: 72px 0;
+  text-align: center;
+}
+
+.contact-hero .tag { background: rgba(21,186,179,0.2); color: var(--teal); margin-bottom: 20px; display: inline-block; }
+.contact-hero h1 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; color: var(--white); margin-bottom: 16px; letter-spacing: -0.03em; }
+.contact-hero p { color: rgba(255,255,255,0.7); max-width: 500px; margin: 0 auto; font-size: 1.05rem; line-height: 1.7; }
+
+.contact-section { padding: 80px 0; }
+
+.contact-inner {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.contact-form-wrap h2 { font-size: 1.4rem; font-weight: 800; margin-bottom: 6px; letter-spacing: -0.02em; }
+.form-sub { color: var(--gray-text); font-size: 0.9rem; margin-bottom: 28px; }
+
+.contact-form { display: flex; flex-direction: column; gap: 20px; }
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px 16px;
+  border: 1.5px solid var(--gray-mid);
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  font-family: var(--font-body);
+  color: var(--dark);
+  background: var(--white);
+  transition: border-color 0.15s;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--teal);
+}
+
+.form-group textarea { resize: vertical; min-height: 120px; }
+
+.submit-btn { align-self: flex-start; }
+
+/* Contact info */
+.contact-info h2 { font-size: 1.4rem; font-weight: 800; margin-bottom: 24px; letter-spacing: -0.02em; }
+
+.contact-items { display: flex; flex-direction: column; gap: 16px; margin-bottom: 32px; }
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: var(--gray-light);
+  border-radius: var(--radius);
+  color: var(--dark);
+  text-decoration: none;
+  transition: background 0.15s;
+}
+
+a.contact-item:hover { background: rgba(21,186,179,0.1); }
+
+.contact-item-icon { font-size: 1.4rem; flex-shrink: 0; }
+.contact-item strong { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 2px; }
+.contact-item span { font-size: 0.88rem; color: var(--gray-text); }
+
+.contact-social { margin-bottom: 24px; }
+.contact-social h3 { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--gray-text); margin-bottom: 12px; }
+
+.social-links { display: flex; gap: 12px; }
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: var(--gray-light);
+  border-radius: var(--radius);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--dark);
+  transition: background 0.15s, color 0.15s;
+}
+
+.social-link:hover { background: var(--teal); color: var(--white); }
+
+.kennismaking-card {
+  background: var(--gray-light);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+}
+
+.kennismaking-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+.kennismaking-card p { font-size: 0.88rem; color: var(--gray-text); line-height: 1.6; }
+
+@media (max-width: 900px) {
+  .contact-inner { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+}
+</style>

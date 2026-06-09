@@ -1,0 +1,236 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Bedrijfsfotografie & Productfotografie | Bel Peter"
+  description="Professionele bedrijfsfotografie door Peter. Bedrijfsportretten, productfoto's en sfeerreportages die jouw merk onderscheiden. Bekijk de mogelijkheden."
+>
+
+  <section class="service-hero foto-hero">
+    <div class="container">
+      <span class="tag">Fotografie</span>
+      <h1>Beelden die jouw<br /><span class="accent">verhaal vertellen</span></h1>
+      <p>Professionele fotografie die niet alleen mooi is, maar ook werkt. Voor je website, social media, offertes en alles daartussen.</p>
+      <div class="hero-actions">
+        <a href="/contact" class="btn btn-primary">Vraag een shoot aan</a>
+        <a href="#prijzen" class="btn btn-secondary">Bekijk pakketten</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">Wat je krijgt</span>
+        <h2>Fotografie voor elk onderdeel<br />van jouw bedrijf</h2>
+      </div>
+      <div class="photo-types">
+        <div class="photo-type">
+          <div class="photo-type-img" style="background: linear-gradient(135deg, var(--dark), var(--forest))">👤</div>
+          <h3>Bedrijfsportretten</h3>
+          <p>Professionele portretfoto's van jou en je team. Vertrouwenwekkend en authentiek.</p>
+        </div>
+        <div class="photo-type">
+          <div class="photo-type-img" style="background: linear-gradient(135deg, var(--forest), #1a3a34)">📦</div>
+          <h3>Productfotografie</h3>
+          <p>Jouw producten op hun best. Helder, aantrekkelijk en klaar voor webshop of brochure.</p>
+        </div>
+        <div class="photo-type">
+          <div class="photo-type-img" style="background: linear-gradient(135deg, #1a1a2e, #16213e)">🏢</div>
+          <h3>Locatie & sfeer</h3>
+          <p>Jouw werkplek, showroom of evenement vastgelegd zoals het echt is.</p>
+        </div>
+        <div class="photo-type">
+          <div class="photo-type-img" style="background: linear-gradient(135deg, #2d1b69, #11998e)">📱</div>
+          <h3>Social media content</h3>
+          <p>Foto's gemaakt voor Instagram, LinkedIn en Facebook. Direct inzetbaar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="prijzen" class="prijzen-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">Pakketten</span>
+        <h2>Transparante prijzen,<br />geen verrassingen</h2>
+      </div>
+      <div class="prijzen-grid">
+        <div class="prijs-card">
+          <div class="prijs-header">
+            <h3>Starter</h3>
+            <div class="prijs-amount">Op aanvraag</div>
+          </div>
+          <ul class="prijs-list">
+            <li>✓ 2 uur fotosessie</li>
+            <li>✓ 20 bewerkte foto's</li>
+            <li>✓ 1 locatie</li>
+            <li>✓ Online galerij</li>
+          </ul>
+          <a href="/contact" class="btn btn-outline">Aanvragen</a>
+        </div>
+        <div class="prijs-card prijs-card-featured">
+          <div class="prijs-badge">Meest gekozen</div>
+          <div class="prijs-header">
+            <h3>Professioneel</h3>
+            <div class="prijs-amount">Op aanvraag</div>
+          </div>
+          <ul class="prijs-list">
+            <li>✓ 4 uur fotosessie</li>
+            <li>✓ 50 bewerkte foto's</li>
+            <li>✓ 2 locaties of thema's</li>
+            <li>✓ Portret + omgeving</li>
+            <li>✓ Online galerij & download</li>
+          </ul>
+          <a href="/contact" class="btn btn-primary">Aanvragen</a>
+        </div>
+        <div class="prijs-card">
+          <div class="prijs-header">
+            <h3>Complete shoot</h3>
+            <div class="prijs-amount">Op aanvraag</div>
+          </div>
+          <ul class="prijs-list">
+            <li>✓ Volledige dag</li>
+            <li>✓ 100+ bewerkte foto's</li>
+            <li>✓ Meerdere locaties</li>
+            <li>✓ Team & producten</li>
+            <li>✓ Prioriteit in levering</li>
+          </ul>
+          <a href="/contact" class="btn btn-outline">Aanvragen</a>
+        </div>
+      </div>
+      <p class="prijzen-note">Prijzen zijn afhankelijk van wensen en locatie. Vraag vrijblijvend een offerte aan.</p>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-inner">
+        <div class="cta-text">
+          <h2>Klaar voor professionele foto's?</h2>
+          <p>Plan een vrijblijvende kennismaking en bespreek de mogelijkheden.</p>
+        </div>
+        <a href="/contact" class="btn btn-primary">Neem contact op</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+.service-hero {
+  padding: 80px 0;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--dark) 0%, var(--forest) 100%);
+}
+
+.service-hero .tag {
+  background: rgba(21,186,179,0.2);
+  color: var(--teal);
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.service-hero h1 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 20px;
+  letter-spacing: -0.03em;
+}
+
+.accent { color: var(--yellow); }
+
+.service-hero p {
+  color: rgba(255,255,255,0.75);
+  max-width: 500px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+.section-header { text-align: center; max-width: 600px; margin: 0 auto 56px; }
+.section-header h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 800; margin: 12px 0 0; letter-spacing: -0.03em; }
+
+.photo-types {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.photo-type { border-radius: var(--radius-lg); overflow: hidden; background: var(--gray-light); }
+
+.photo-type-img {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+.photo-type h3 { font-size: 1rem; font-weight: 700; margin: 16px 20px 8px; }
+.photo-type p { font-size: 0.85rem; color: var(--gray-text); line-height: 1.6; margin: 0 20px 20px; }
+
+.prijzen-section { background: var(--gray-light); }
+
+.prijzen-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.prijs-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  border: 1px solid var(--gray-mid);
+  position: relative;
+}
+
+.prijs-card-featured {
+  border-color: var(--teal);
+  box-shadow: 0 8px 32px rgba(21,186,179,0.15);
+}
+
+.prijs-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--teal);
+  color: var(--white);
+  padding: 4px 16px;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.prijs-header { margin-bottom: 24px; }
+.prijs-header h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 4px; }
+.prijs-amount { font-family: var(--font-display); font-weight: 800; font-size: 1.4rem; color: var(--teal); }
+
+.prijs-list { list-style: none; margin-bottom: 24px; display: flex; flex-direction: column; gap: 10px; }
+.prijs-list li { font-size: 0.88rem; color: var(--dark); }
+
+.prijzen-note { text-align: center; font-size: 0.85rem; color: var(--gray-text); }
+
+.cta-banner { background: linear-gradient(135deg, var(--forest) 0%, var(--dark) 100%); padding: 64px 0; }
+.cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+.cta-text h2 { font-size: 1.8rem; font-weight: 800; color: var(--white); margin-bottom: 8px; letter-spacing: -0.03em; }
+.cta-text p { color: rgba(255,255,255,0.7); }
+
+@media (max-width: 900px) {
+  .photo-types { grid-template-columns: 1fr 1fr; }
+  .prijzen-grid { grid-template-columns: 1fr; }
+  .cta-inner { flex-direction: column; text-align: center; }
+}
+
+@media (max-width: 600px) {
+  .photo-types { grid-template-columns: 1fr; }
+}
+</style>
