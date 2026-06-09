@@ -19,8 +19,7 @@ const navItems = [
   <div class="container nav-inner">
     <a href="/" class="nav-logo">
       <span class="logo-bel">BEL</span><span class="logo-peter">PETER</span>
-      <span class="logo-dot">·</span>
-      <span class="logo-twente">Twente</span>
+      <span class="logo-sub">· Twente</span>
     </a>
 
     <ul class="nav-links">
@@ -29,19 +28,21 @@ const navItems = [
           <a href={item.href} class="nav-link">
             {item.label}
             {item.children && (
-              <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
-                <path d="M2.5 4.5L6.5 8.5L10.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
               </svg>
             )}
           </a>
           {item.children && (
-            <div class="dropdown">
-              {item.children.map(child => (
-                <a href={child.href} class="dropdown-item">
-                  <span class="dropdown-label">{child.label}</span>
-                  <span class="dropdown-desc">{child.desc}</span>
-                </a>
-              ))}
+            <div class="dropdown-wrap">
+              <div class="dropdown">
+                {item.children.map(child => (
+                  <a href={child.href} class="dropdown-item">
+                    <span class="di-label">{child.label}</span>
+                    <span class="di-desc">{child.desc}</span>
+                  </a>
+                ))}
+              </div>
             </div>
           )}
         </li>
@@ -50,7 +51,7 @@ const navItems = [
 
     <a href="/contact" class="btn btn-primary nav-cta">Gratis kennismaking</a>
 
-    <button class="hamburger" id="hamburger" aria-label="Menu">
+    <button class="hamburger" id="hamburger" aria-label="Menu openen">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -59,21 +60,17 @@ const navItems = [
     <ul>
       {navItems.map(item => (
         <li>
-          <a href={item.href} class="mobile-link">{item.label}</a>
+          <a href={item.href} class="mob-link">{item.label}</a>
           {item.children && (
-            <ul class="mobile-sub">
+            <ul class="mob-sub">
               {item.children.map(child => (
-                <li><a href={child.href} class="mobile-sub-link">{child.label}</a></li>
+                <li><a href={child.href} class="mob-sub-link">{child.label}</a></li>
               ))}
             </ul>
           )}
         </li>
       ))}
-      <li>
-        <a href="/contact" class="btn btn-teal" style="margin-top:16px;width:100%;justify-content:center;">
-          Gratis kennismaking
-        </a>
-      </li>
+      <li><a href="/contact" class="btn btn-primary" style="margin-top:16px;width:100%;justify-content:center;">Gratis kennismaking</a></li>
     </ul>
   </div>
 </nav>
@@ -82,16 +79,13 @@ const navItems = [
 .nav {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 200;
   background: var(--white);
-  border-bottom: 2px solid var(--teal-light);
+  border-bottom: 3px solid var(--yellow);
   height: var(--nav-height);
   transition: box-shadow 0.2s;
 }
-
-.nav.scrolled {
-  box-shadow: 0 4px 24px rgba(21,186,179,0.12);
-}
+.nav.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,0.10); }
 
 .nav-inner {
   display: flex;
@@ -101,27 +95,21 @@ const navItems = [
 }
 
 .nav-logo {
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 1.25rem;
-  letter-spacing: -0.03em;
+  font-family: var(--font);
+  font-weight: 900;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
   flex-shrink: 0;
   display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.logo-bel { color: var(--teal); }
-.logo-peter { color: var(--dark); }
-.logo-dot { color: var(--gray-mid); font-weight: 400; }
-.logo-twente { color: var(--gray-text); font-weight: 600; font-size: 0.85rem; letter-spacing: 0; }
-
-.nav-links {
-  display: flex;
-  list-style: none;
+  align-items: baseline;
   gap: 2px;
-  flex: 1;
 }
+.logo-bel { color: var(--dark); }
+.logo-peter { color: var(--teal); }
+.logo-sub { font-size: 0.68rem; font-weight: 600; color: var(--gray-text); text-transform: none; letter-spacing: 0; margin-left: 3px; }
+
+.nav-links { display: flex; list-style: none; gap: 2px; flex: 1; }
 
 .has-dropdown { position: relative; }
 
@@ -130,93 +118,85 @@ const navItems = [
   align-items: center;
   gap: 4px;
   padding: 8px 14px;
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
   color: var(--dark);
-  border-radius: 100px;
-  transition: background 0.15s, color 0.15s;
+  border-radius: 8px;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+.nav-link:hover { background: var(--yellow); }
+
+/* KEY FIX: wrap creates invisible bridge between link and panel */
+.dropdown-wrap {
+  position: absolute;
+  top: 100%;           /* starts right at bottom of nav-link */
+  left: 0;
+  padding-top: 6px;    /* invisible 6px tall bridge — mouse stays inside */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.12s, visibility 0.12s;
+  z-index: 300;
 }
 
-.nav-link:hover { background: var(--teal-light); color: var(--teal-dark); }
+/* Open when hovering the entire <li> (includes both link and wrap) */
+.has-dropdown:hover .dropdown-wrap,
+.has-dropdown:focus-within .dropdown-wrap {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
 
 .dropdown {
-  display: none;
-  position: absolute;
-  top: calc(100% + 8px);
-  left: 0;
   background: var(--white);
-  border: 2px solid var(--teal-light);
+  border: 2px solid var(--yellow);
   border-radius: var(--radius-lg);
   padding: 8px;
   min-width: 240px;
-  box-shadow: 0 16px 40px rgba(21,186,179,0.15);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.12);
 }
-
-.has-dropdown:hover .dropdown { display: block; }
 
 .dropdown-item {
   display: flex;
   flex-direction: column;
-  padding: 10px 14px;
+  gap: 2px;
+  padding: 11px 14px;
   border-radius: var(--radius);
-  transition: background 0.15s;
+  transition: background 0.12s;
 }
+.dropdown-item:hover { background: rgba(255,240,1,0.15); }
 
-.dropdown-item:hover { background: var(--teal-light); }
+.di-label { font-weight: 700; font-size: 0.875rem; color: var(--dark); }
+.di-desc { font-size: 0.75rem; color: var(--gray-text); font-weight: 400; text-transform: none; letter-spacing: 0; }
 
-.dropdown-label { font-weight: 700; font-size: 0.9rem; color: var(--dark); }
-.dropdown-desc { font-size: 0.78rem; color: var(--gray-text); margin-top: 2px; }
+.nav-cta { margin-left: auto; flex-shrink: 0; font-size: 0.78rem; padding: 10px 20px; }
 
-.nav-cta { margin-left: auto; flex-shrink: 0; font-size: 0.875rem; padding: 10px 20px; }
+.hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; margin-left: auto; }
+.hamburger span { width: 24px; height: 2.5px; background: var(--dark); border-radius: 2px; }
 
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 8px;
-  margin-left: auto;
-}
-
-.hamburger span {
-  width: 24px; height: 2.5px;
-  background: var(--dark);
-  border-radius: 2px;
-}
-
-.mobile-menu {
-  display: none;
-  position: absolute;
-  top: var(--nav-height);
-  left: 0; right: 0;
-  background: var(--white);
-  border-bottom: 2px solid var(--teal-light);
-  padding: 20px 24px 28px;
-  box-shadow: 0 16px 40px rgba(0,0,0,0.08);
-}
-
+.mobile-menu { display: none; position: absolute; top: var(--nav-height); left: 0; right: 0; background: var(--white); border-bottom: 3px solid var(--yellow); padding: 20px 24px 28px; box-shadow: 0 16px 40px rgba(0,0,0,0.1); }
 .mobile-menu.open { display: block; }
 .mobile-menu ul { list-style: none; }
-.mobile-link { display: block; padding: 13px 0; font-weight: 700; font-size: 1rem; border-bottom: 1px solid var(--gray-light); color: var(--dark); }
-.mobile-sub { padding-left: 16px; margin-bottom: 8px; }
-.mobile-sub-link { display: block; padding: 8px 0; font-size: 0.9rem; color: var(--gray-text); }
+.mob-link { display: block; padding: 13px 0; font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; border-bottom: 1px solid var(--gray-light); color: var(--dark); }
+.mob-sub { padding-left: 16px; margin-bottom: 8px; }
+.mob-sub-link { display: block; padding: 8px 0; font-size: 0.85rem; color: var(--gray-text); font-weight: 500; }
 
 @media (max-width: 900px) {
   .nav-links, .nav-cta { display: none; }
   .hamburger { display: flex; }
-  .nav { position: sticky; }
 }
 </style>
 
 <script>
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobile-menu');
-hamburger?.addEventListener('click', () => mobileMenu?.classList.toggle('open'));
-
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-  nav?.classList.toggle('scrolled', window.scrollY > 20);
+hamburger?.addEventListener('click', () => {
+  mobileMenu?.classList.toggle('open');
 });
+window.addEventListener('scroll', () => {
+  document.getElementById('nav')?.classList.toggle('scrolled', window.scrollY > 20);
+}, { passive: true });
 </script>

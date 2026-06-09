@@ -106,22 +106,47 @@ import Layout from '../../layouts/Layout.astro';
         <h2 style="color:var(--white);">Kies jouw website</h2>
       </div>
       <div class="web-pakketten">
-        {[
-          { name:'Starter', sub:'1–5 pagina\'s', kleur:'var(--teal)', items:['Op maat ontwerp','Mobielvriendelijk','SEO-basis','Contactformulier','1 maand support'], featured:false },
-          { name:'Business', sub:'5–15 pagina\'s', kleur:'var(--yellow)', items:['Uitgebreid ontwerp','SEO-optimalisatie','Google Analytics','CMS voor eigen beheer','Blog/nieuws module','3 maanden support'], featured:true },
-          { name:'E-commerce', sub:'Webshop op maat', kleur:'var(--sky)', items:['Webshop & producten','Betaalintegratie','Voorraadbeheer','Klantaccounts','Uitgebreide SEO','6 maanden support'], featured:false },
-        ].map(p => (
-          <div class={`wp-card ${p.featured ? 'wp-featured' : ''}`} style={p.featured ? `border:2px solid ${p.kleur}` : 'border:2px solid rgba(255,255,255,0.08)'}>
-            {p.featured && <div class="wp-badge" style={`background:${p.kleur};color:${p.kleur === 'var(--yellow)' ? 'var(--dark)' : 'var(--white)'}`}>Meest gekozen</div>}
-            <div class="wp-accent" style={`background:${p.kleur};`}></div>
-            <h3 style="color:var(--white);">{p.name}</h3>
-            <p style="color:var(--teal);font-weight:600;font-size:0.88rem;margin-bottom:20px;">{p.sub}</p>
-            <ul class="wp-list">
-              {p.items.map(i => <li style="color:rgba(255,255,255,0.7);">✓ {i}</li>)}
-            </ul>
-            <a href="/contact" class="btn btn-outline-white" style="width:100%;justify-content:center;margin-top:auto;">Aanvragen</a>
-          </div>
-        ))}
+        <div class="wp-card" style="border:2px solid rgba(255,255,255,0.08);">
+          <div class="wp-accent" style="background:var(--teal);"></div>
+          <h3 style="color:var(--white);">Starter</h3>
+          <div class="wp-prijs">€ 390<small>excl. btw</small></div>
+          <p style="color:var(--teal);font-weight:600;font-size:0.82rem;margin-bottom:20px;">Snel online</p>
+          <ul class="wp-list">
+            <li style="color:rgba(255,255,255,0.7);">✓ Uitgebreid ontwerp</li>
+            <li style="color:rgba(255,255,255,0.7);">✓ Mobielvriendelijk</li>
+            <li style="color:rgba(255,255,255,0.7);">✓ SEO-basis</li>
+            <li style="color:rgba(255,255,255,0.7);">✓ Contactformulier</li>
+          </ul>
+          <a href="/contact" class="btn btn-outline-white" style="width:100%;justify-content:center;margin-top:auto;">Aanvragen</a>
+        </div>
+        <div class="wp-card wp-featured" style="border:2px solid var(--yellow);">
+          <div class="wp-badge" style="background:var(--yellow);color:var(--dark);">Meest gekozen</div>
+          <div class="wp-accent" style="background:var(--yellow);"></div>
+          <h3 style="color:var(--white);">Business</h3>
+          <div class="wp-prijs" style="color:var(--yellow);">vanaf € 550<small style="color:rgba(255,255,255,0.5);">excl. btw</small></div>
+          <p style="color:var(--teal);font-weight:600;font-size:0.82rem;margin-bottom:20px;">Projecttijd ± 3 weken</p>
+          <ul class="wp-list">
+            <li style="color:rgba(255,255,255,0.7);">✓ Uitgebreid ontwerp</li>
+            <li style="color:rgba(255,255,255,0.7);">✓ SEO-optimalisatie</li>
+            <li style="color:rgba(255,255,255,0.7);">✓ Google Analytics</li>
+            <li style="color:rgba(255,255,255,0.7);">✓ CMS voor eigen beheer</li>
+            <li style="color:rgba(255,255,255,0.7);">✓ Blog / nieuws module</li>
+          </ul>
+          <a href="/contact" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:auto;">Aanvragen</a>
+        </div>
+        <div class="wp-card" style="border:2px solid rgba(125,211,252,0.3);">
+          <div class="wp-accent" style="background:var(--sky);"></div>
+          <h3 style="color:var(--white);">Business op maat</h3>
+          <div class="wp-prijs" style="color:var(--sky);">vanaf € 1.990<small style="color:rgba(255,255,255,0.5);">excl. btw</small></div>
+          <p style="color:var(--teal);font-weight:600;font-size:0.82rem;margin-bottom:20px;">Alles van Business +</p>
+          <ul class="wp-list">
+            <li style="color:rgba(255,255,255,0.7);">✓ Op maat ontwerp</li>
+            <li style="color:rgba(255,255,255,0.7);">✓ Webshop met betaalintegratie</li>
+            <li style="color:rgba(255,255,255,0.7);">✓ Uitgebreide SEO</li>
+            <li style="color:rgba(255,255,255,0.7);">✓ 6 maanden support</li>
+          </ul>
+          <a href="/contact" class="btn btn-outline-white" style="width:100%;justify-content:center;margin-top:auto;">Aanvragen</a>
+        </div>
       </div>
     </div>
   </section>
@@ -169,6 +194,8 @@ import Layout from '../../layouts/Layout.astro';
 .bc-url { flex: 1; background: var(--white); border-radius: 6px; padding: 4px 12px; font-size: 0.75rem; color: var(--gray-text); }
 .bc-content { padding: 24px; }
 
+.wp-prijs { font-family: var(--font); font-weight: 800; font-size: 1.5rem; color: var(--white); margin-bottom: 4px; }
+.wp-prijs small { font-size: 0.68rem; font-weight: 500; margin-left: 3px; }
 .web-pakketten { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .wp-card { background: rgba(255,255,255,0.04); border-radius: var(--radius-lg); padding: 32px; position: relative; display: flex; flex-direction: column; }
 .wp-accent { width: 48px; height: 4px; border-radius: 2px; margin-bottom: 20px; }

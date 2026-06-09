@@ -16,7 +16,7 @@ import Layout from '../../layouts/Layout.astro';
       <p>Geen gladde stockfoto's. Wel echte, professionele beelden die jouw verhaal vertellen. Voor websites, LinkedIn, social media en meer.</p>
       <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:28px;">
         <a href="/contact" class="btn btn-primary">Shoot aanvragen</a>
-        <a href="https://fotograafpeter.nl" target="_blank" class="btn btn-outline-white">Bekijk portfolio</a>
+        <a href="/diensten/fotografie" class="btn btn-outline-white">Bekijk diensten</a>
       </div>
     </div>
   </section>
@@ -77,23 +77,40 @@ import Layout from '../../layouts/Layout.astro';
         <p style="color:rgba(20,18,19,0.7);">Op maat afgestemd op jouw wensen en locatie in Twente.</p>
       </div>
       <div class="prijzen-grid">
-        {[
-          { name: 'Starter', sub: '2 uur · 20 foto\'s', items: ['Op locatie in Twente','20 bewerkte foto\'s','1 thema of locatie','Online galerij'], featured: false },
-          { name: 'Professioneel', sub: '4 uur · 50 foto\'s', items: ['Op locatie in Twente','50 bewerkte foto\'s','2 thema\'s of locaties','Portret + omgeving','Online galerij & download'], featured: true },
-          { name: 'Complete shoot', sub: 'Volledige dag', items: ['Volledige dag','100+ bewerkte foto\'s','Meerdere locaties','Team, product & sfeer','Prioriteit in levering'], featured: false },
-        ].map(p => (
-          <div class={`prijs-card ${p.featured ? 'prijs-featured' : ''}`}>
-            {p.featured && <div class="prijs-badge">Meest gekozen</div>}
-            <h3>{p.name}</h3>
-            <p class="prijs-sub">{p.sub}</p>
-            <ul class="prijs-items">
-              {p.items.map(i => <li>✓ {i}</li>)}
-            </ul>
-            <a href="/contact" class={`btn ${p.featured ? 'btn-teal' : 'btn-outline-dark'}`} style="width:100%;justify-content:center;">Aanvragen</a>
-          </div>
-        ))}
+        <div class="prijs-card">
+          <h3>Starter</h3>
+          <p class="prijs-sub">2 uur · 20 foto's</p>
+          <div class="prijs-prijs">€ 350<small>excl. btw</small></div>
+          <ul class="prijs-items">
+            <li>✓ Op locatie in Twente</li>
+            <li>✓ 20 bewerkte foto's</li>
+            <li>✓ 1 thema of locatie</li>
+          </ul>
+          <a href="/contact" class="btn btn-outline-dark" style="width:100%;justify-content:center;">Aanvragen</a>
+        </div>
+        <div class="prijs-card prijs-featured">
+          <div class="prijs-badge">Meest gekozen</div>
+          <h3>Professioneel</h3>
+          <p class="prijs-sub">4 uur · 50 foto's</p>
+          <div class="prijs-prijs" style="color:var(--yellow);">€ 450<small style="color:rgba(255,255,255,0.6);">excl. btw</small></div>
+          <ul class="prijs-items">
+            <li>✓ Op locatie in Twente</li>
+            <li>✓ 50 bewerkte foto's</li>
+            <li>✓ 2 thema's of locaties</li>
+            <li>✓ Portret + omgeving</li>
+          </ul>
+          <a href="/contact" class="btn btn-primary" style="width:100%;justify-content:center;">Aanvragen</a>
+        </div>
+        <div class="prijs-card prijs-custom">
+          <div class="prijs-custom-icon">💬</div>
+          <h3>Complete shoot</h3>
+          <p class="prijs-sub">Volledige dag</p>
+          <div class="prijs-prijs">Op aanvraag</div>
+          <p style="font-size:0.84rem;color:var(--gray-text);margin-bottom:20px;line-height:1.6;">Meerdere locaties, teams en producten. Prijs op maat.</p>
+          <a href="/contact" class="btn btn-outline-dark" style="width:100%;justify-content:center;">Vraag offerte aan</a>
+        </div>
       </div>
-      <p style="text-align:center;font-size:0.82rem;color:rgba(20,18,19,0.6);margin-top:20px;">Prijzen op aanvraag · Afhankelijk van wensen en locatie</p>
+      <p class="prijs-note">* Afhankelijk van wensen en locatie kan de prijs omhoog gaan</p>
     </div>
   </section>
 
@@ -106,7 +123,7 @@ import Layout from '../../layouts/Layout.astro';
         </div>
         <div class="cta-actions">
           <a href="/contact" class="btn btn-primary">Shoot aanvragen</a>
-          <a href="https://fotograafpeter.nl" target="_blank" class="btn btn-outline-white">Bekijk fotograafpeter.nl</a>
+          <a href="/contact" class="btn btn-outline-white">Shoot aanvragen</a>
         </div>
       </div>
     </div>
@@ -134,7 +151,11 @@ import Layout from '../../layouts/Layout.astro';
 
 .prijzen-wrap .section-header { text-align: center; }
 .prijzen-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.prijs-card { background: var(--white); border-radius: var(--radius-lg); padding: 32px; position: relative; }
+.prijs-prijs { font-family: var(--font); font-weight: 800; font-size: 1.7rem; color: var(--dark); margin-bottom: 20px; }
+.prijs-prijs small { font-size: 0.7rem; font-weight: 500; color: var(--gray-text); margin-left: 4px; }
+.prijs-note { text-align: center; font-size: 0.78rem; color: rgba(20,18,19,0.55); margin-top: 20px; }
+.prijs-custom { background: var(--gray-light); border: 2px dashed var(--gray-mid); text-align: center; }
+.prijs-custom-icon { font-size: 2.5rem; margin-bottom: 12px; }
 .prijs-featured { background: var(--dark); }
 .prijs-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--teal); color: var(--white); padding: 5px 16px; border-radius: 100px; font-size: 0.75rem; font-weight: 700; white-space: nowrap; }
 .prijs-card h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 4px; }
