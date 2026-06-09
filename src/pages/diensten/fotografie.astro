@@ -2,115 +2,61 @@
 import Layout from '../../layouts/Layout.astro';
 ---
 <Layout
-  title="Bedrijfsfotografie Twente — Peter Rutgers | Bel Peter"
-  description="Professionele bedrijfsfotografie in Twente door Peter Rutgers. Bedrijfsportretten, productfotografie en sfeerreportages voor Nijverdal, Almelo, Hengelo en omgeving."
+  title="Fotografie Twente — Bedrijfsfotografie via Fotograaf Peter | Bel Peter"
+  description="Op zoek naar professionele bedrijfsfotografie in Twente? Peter Rutgers werkt ook als fotograaf voor bedrijven in Nijverdal, Almelo, Hengelo en omgeving."
 >
-  <section class="svc-hero foto-hero">
-    <div class="svc-hero-bg">
-      <img src="https://fotograafpeter.nl/images/headers/bedrijfsfotografie.jpg" alt="Bedrijfsfotografie Twente" onerror="this.style.display='none'"/>
-      <div class="svc-hero-overlay"></div>
-    </div>
-    <div class="container svc-hero-inner">
-      <span class="tag" style="background:rgba(255,240,1,0.2);color:var(--yellow)">Dienst 01 — Fotografie</span>
-      <h1>Beelden die laten zien<br /><span style="color:var(--yellow)">wie jij écht bent</span></h1>
-      <p>Geen gladde stockfoto's. Wel echte, professionele beelden die jouw verhaal vertellen. Voor websites, LinkedIn, social media en meer.</p>
-      <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:28px;">
-        <a href="/contact" class="btn btn-primary">Shoot aanvragen</a>
-        <a href="/diensten/fotografie" class="btn btn-outline-white">Bekijk diensten</a>
-      </div>
+
+  <section style="background:var(--dark);padding:88px 0;text-align:center;">
+    <div class="container">
+      <span class="tag tag-white" style="background:rgba(255,255,255,0.1);color:var(--white);margin-bottom:16px;">Fotografie</span>
+      <h1 style="color:var(--white);margin-bottom:16px;">BEDRIJFSFOTOGRAFIE<br /><span style="color:var(--yellow)">IN TWENTE</span></h1>
+      <p style="color:rgba(255,255,255,0.7);max-width:520px;margin:0 auto 32px;font-size:1rem;line-height:1.75;font-weight:400;">
+        Peter is naast zichtbaarheidspartner ook actief als professioneel fotograaf voor bedrijven in Twente. Bedrijfsportretten, productfotografie en sfeerreportages — echte beelden, geen stockfoto's.
+      </p>
+      <a href="https://fotograafpeter.nl" target="_blank" rel="noopener" class="btn btn-primary">
+        Bekijk fotograafpeter.nl
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
     </div>
   </section>
 
-  <section style="background:var(--teal);padding:24px 0;">
-    <div class="container" style="display:flex;justify-content:center;gap:48px;flex-wrap:wrap;">
-      <div style="text-align:center;color:var(--white);">
-        <div style="font-family:var(--font-display);font-weight:800;font-size:1.6rem;">Op locatie</div>
-        <div style="font-size:0.82rem;opacity:0.8;">In Twente & Overijssel</div>
-      </div>
-      <div style="text-align:center;color:var(--white);">
-        <div style="font-family:var(--font-display);font-weight:800;font-size:1.6rem;">10 werkdagen</div>
-        <div style="font-size:0.82rem;opacity:0.8;">Levertijd bewerkte foto's</div>
-      </div>
-      <div style="text-align:center;color:var(--white);">
-        <div style="font-family:var(--font-display);font-weight:800;font-size:1.6rem;">Ruim gebruiksrecht</div>
-        <div style="font-size:0.82rem;opacity:0.8;">Web, social & print</div>
-      </div>
-    </div>
-  </section>
-
-  <section>
+  <section style="background:var(--yellow);padding:80px 0;">
     <div class="container">
       <div class="section-header">
-        <span class="tag">Wat maakt het uit?</span>
-        <h2>Mensen kopen van mensen<br />die ze vertrouwen</h2>
-        <p>Professionele beelden bouwen dat vertrouwen. Ze laten zien wie jullie zijn, hoe jullie werken en wat jullie bewegen. Dát is wat je website en social media levend maakt.</p>
+        <span class="tag" style="background:rgba(20,18,19,0.1);color:var(--dark);">Wat biedt Peter?</span>
+        <h2 style="color:var(--dark);">VIER SOORTEN<br />FOTOGRAFIE</h2>
+        <p style="color:rgba(20,18,19,0.65);">Voor elk type bedrijf het juiste beeld. Op locatie in Twente en Overijssel.</p>
       </div>
-      <div class="foto-types">
+      <div class="foto-grid">
         {[
-          { img: 'https://fotograafpeter.nl/images/services/bedrijf-portret.jpg', num: '01', title: 'Zakelijke portretten', desc: 'Voor website, LinkedIn en team. Professioneel en herkenbaar.' },
-          { img: 'https://fotograafpeter.nl/images/services/bedrijf-sfeer.jpg', num: '02', title: 'Sfeer & locatie', desc: 'Jouw werkplek zoals hij écht is. Authentiek en aansprekend.' },
-          { img: 'https://fotograafpeter.nl/images/services/bedrijf-werk.jpg', num: '03', title: 'Aan-het-werk beelden', desc: 'Mensen in beweging, gefocust, in hun element.' },
-          { img: 'https://fotograafpeter.nl/images/services/bedrijf-team.jpg', num: '04', title: 'Team & cultuur', desc: 'Groepsfoto\'s die niet stijf aanvoelen — gewoon hoe jullie zijn.' },
-          { img: 'https://fotograafpeter.nl/images/services/bedrijf-product.jpg', num: '05', title: 'Productfotografie', desc: 'Jouw product in het beste licht — klaar voor webshop of brochure.' },
-          { img: 'https://fotograafpeter.nl/images/services/bedrijf-event.jpg', num: '06', title: 'Events & openingen', desc: 'Jubilea, lanceringen en opening — vastgelegd zoals ze bedoeld zijn.' },
-        ].map(item => (
-          <div class="foto-type-card">
-            <div class="ftc-img">
-              <img src={item.img} alt={item.title} onerror="this.parentElement.style.background='var(--forest)';this.style.display='none'"/>
-              <span class="ftc-num">{item.num}</span>
-            </div>
-            <div class="ftc-body">
-              <h3>{item.title}</h3>
-              <p>{item.desc}</p>
-            </div>
+          { icon: '👤', title: 'Zakelijke portretten', desc: 'Voor website, LinkedIn en team. Professioneel en herkenbaar. Mensen kopen van mensen — laat zien wie je bent.' },
+          { icon: '🏢', title: 'Sfeer & locatie', desc: 'Jouw werkplek zoals hij écht is. Authentieke beelden die jouw bedrijfscultuur laten zien.' },
+          { icon: '📦', title: 'Productfotografie', desc: 'Jouw producten in het beste licht. Klaar voor webshop, brochure of social media.' },
+          { icon: '📅', title: 'Events & openingen', desc: 'Jubilea, lanceringen en openingen vastgelegd zoals ze bedoeld zijn.' },
+        ].map(f => (
+          <div class="fg-card">
+            <div class="fg-icon">{f.icon}</div>
+            <h3>{f.title}</h3>
+            <p>{f.desc}</p>
           </div>
         ))}
       </div>
     </div>
   </section>
 
-  <section style="background:var(--yellow);padding:80px 0;">
-    <div class="container prijzen-wrap">
-      <div class="section-header" style="margin-bottom:48px;">
-        <span class="tag tag-yellow" style="background:rgba(0,0,0,0.1);color:var(--dark);">Pakketten</span>
-        <h2 style="color:var(--dark);">Transparante prijzen,<br />geen verrassingen</h2>
-        <p style="color:rgba(20,18,19,0.7);">Op maat afgestemd op jouw wensen en locatie in Twente.</p>
+  <section style="background:var(--dark);padding:80px 0;text-align:center;">
+    <div class="container">
+      <h2 style="color:var(--white);margin-bottom:16px;">BEKIJK HET VOLLEDIG<br /><span style="color:var(--sky)">PORTFOLIO & DIENSTEN</span></h2>
+      <p style="color:rgba(255,255,255,0.6);max-width:460px;margin:0 auto 32px;font-size:0.95rem;line-height:1.7;font-weight:400;">
+        Alle informatie over fotografie, prijzen en het portfolio vind je op fotograafpeter.nl.
+      </p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+        <a href="https://fotograafpeter.nl" target="_blank" rel="noopener" class="btn btn-primary">
+          Naar fotograafpeter.nl
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+        <a href="/contact" class="btn btn-outline-white">Of neem contact op</a>
       </div>
-      <div class="prijzen-grid">
-        <div class="prijs-card">
-          <h3>Starter</h3>
-          <p class="prijs-sub">2 uur · 20 foto's</p>
-          <div class="prijs-prijs">€ 350<small>excl. btw</small></div>
-          <ul class="prijs-items">
-            <li>✓ Op locatie in Twente</li>
-            <li>✓ 20 bewerkte foto's</li>
-            <li>✓ 1 thema of locatie</li>
-          </ul>
-          <a href="/contact" class="btn btn-outline-dark" style="width:100%;justify-content:center;">Aanvragen</a>
-        </div>
-        <div class="prijs-card prijs-featured">
-          <div class="prijs-badge">Meest gekozen</div>
-          <h3>Professioneel</h3>
-          <p class="prijs-sub">4 uur · 50 foto's</p>
-          <div class="prijs-prijs" style="color:var(--yellow);">€ 450<small style="color:rgba(255,255,255,0.6);">excl. btw</small></div>
-          <ul class="prijs-items">
-            <li>✓ Op locatie in Twente</li>
-            <li>✓ 50 bewerkte foto's</li>
-            <li>✓ 2 thema's of locaties</li>
-            <li>✓ Portret + omgeving</li>
-          </ul>
-          <a href="/contact" class="btn btn-primary" style="width:100%;justify-content:center;">Aanvragen</a>
-        </div>
-        <div class="prijs-card prijs-custom">
-          <div class="prijs-custom-icon">💬</div>
-          <h3>Complete shoot</h3>
-          <p class="prijs-sub">Volledige dag</p>
-          <div class="prijs-prijs">Op aanvraag</div>
-          <p style="font-size:0.84rem;color:var(--gray-text);margin-bottom:20px;line-height:1.6;">Meerdere locaties, teams en producten. Prijs op maat.</p>
-          <a href="/contact" class="btn btn-outline-dark" style="width:100%;justify-content:center;">Vraag offerte aan</a>
-        </div>
-      </div>
-      <p class="prijs-note">* Afhankelijk van wensen en locatie kan de prijs omhoog gaan</p>
     </div>
   </section>
 
@@ -118,57 +64,26 @@ import Layout from '../../layouts/Layout.astro';
     <div class="container">
       <div class="cta-inner">
         <div class="cta-text">
-          <h2>Klaar voor foto's die<br />écht werken?</h2>
-          <p>Plan een vrijblijvende kennismaking met Peter in Twente.</p>
+          <h2>SOCIAL MEDIA OF WEBSITE<br /><span style="color:var(--yellow)">NODIG?</span></h2>
+          <p>Naast fotografie helpt Peter je ook met social media beheer en een professionele website.</p>
         </div>
         <div class="cta-actions">
-          <a href="/contact" class="btn btn-primary">Shoot aanvragen</a>
-          <a href="/contact" class="btn btn-outline-white">Shoot aanvragen</a>
+          <a href="/diensten" class="btn btn-primary">Bekijk alle diensten</a>
+          <a href="/contact" class="btn btn-outline-white">Kennismaking plannen</a>
         </div>
       </div>
     </div>
   </section>
+
 </Layout>
 
 <style>
-.svc-hero { position: relative; min-height: 72vh; display: flex; align-items: flex-end; overflow: hidden; }
-.svc-hero-bg { position: absolute; inset: 0; }
-.svc-hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
-.svc-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(20,18,19,0.92) 0%, rgba(20,18,19,0.4) 100%); }
-.svc-hero-inner { position: relative; z-index: 2; padding-bottom: 64px; }
-.svc-hero-inner h1 { font-size: clamp(2rem, 4.5vw, 3.5rem); font-weight: 800; color: var(--white); margin: 16px 0 16px; letter-spacing: -0.03em; }
-.svc-hero-inner p { color: rgba(255,255,255,0.75); max-width: 520px; font-size: 1.05rem; line-height: 1.7; }
-
-.foto-types { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.foto-type-card { border-radius: var(--radius-lg); overflow: hidden; background: var(--gray-light); transition: transform 0.2s; }
-.foto-type-card:hover { transform: translateY(-4px); }
-.ftc-img { height: 180px; background: var(--dark); position: relative; overflow: hidden; }
-.ftc-img img { width: 100%; height: 100%; object-fit: cover; }
-.ftc-num { position: absolute; top: 12px; left: 12px; background: var(--teal); color: var(--white); padding: 3px 10px; border-radius: 100px; font-size: 0.72rem; font-weight: 700; }
-.ftc-body { padding: 20px; }
-.ftc-body h3 { font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
-.ftc-body p { font-size: 0.84rem; color: var(--gray-text); line-height: 1.6; }
-
-.prijzen-wrap .section-header { text-align: center; }
-.prijzen-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.prijs-prijs { font-family: var(--font); font-weight: 800; font-size: 1.7rem; color: var(--dark); margin-bottom: 20px; }
-.prijs-prijs small { font-size: 0.7rem; font-weight: 500; color: var(--gray-text); margin-left: 4px; }
-.prijs-note { text-align: center; font-size: 0.78rem; color: rgba(20,18,19,0.55); margin-top: 20px; }
-.prijs-custom { background: var(--gray-light); border: 2px dashed var(--gray-mid); text-align: center; }
-.prijs-custom-icon { font-size: 2.5rem; margin-bottom: 12px; }
-.prijs-featured { background: var(--dark); }
-.prijs-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--teal); color: var(--white); padding: 5px 16px; border-radius: 100px; font-size: 0.75rem; font-weight: 700; white-space: nowrap; }
-.prijs-card h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 4px; }
-.prijs-featured h3 { color: var(--white); }
-.prijs-sub { font-size: 0.88rem; color: var(--teal); font-weight: 600; margin-bottom: 20px; }
-.prijs-items { list-style: none; margin-bottom: 24px; display: flex; flex-direction: column; gap: 10px; }
-.prijs-items li { font-size: 0.88rem; }
-.prijs-featured .prijs-items li { color: rgba(255,255,255,0.75); }
-
-@media (max-width: 900px) {
-  .foto-types, .prijzen-grid { grid-template-columns: 1fr 1fr; }
-}
-@media (max-width: 600px) {
-  .foto-types, .prijzen-grid { grid-template-columns: 1fr; }
-}
+.foto-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.fg-card { background: var(--white); border-radius: var(--radius-lg); padding: 28px; transition: transform 0.2s; }
+.fg-card:hover { transform: translateY(-4px); }
+.fg-icon { font-size: 2rem; margin-bottom: 12px; }
+.fg-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; text-transform: none; }
+.fg-card p { font-size: 0.83rem; color: var(--gray-text); line-height: 1.65; font-weight: 400; }
+@media (max-width: 900px) { .foto-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .foto-grid { grid-template-columns: 1fr; } }
 </style>
