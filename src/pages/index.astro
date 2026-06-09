@@ -2,256 +2,376 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Bel Peter — Fotografie, Social Media & Websites | Belpeter.nl">
+<Layout title="Bel Peter — Jouw Zichtbaarheidspartner in Twente | Fotografie, Social Media & Websites">
 
-  <!-- HERO -->
+  <!-- ===== HERO ===== -->
   <section class="hero">
+    <div class="hero-bg-image">
+      <img
+        src="https://fotograafpeter.nl/images/headers/home.jpg"
+        alt="Peter Rutgers aan het werk"
+        onerror="this.parentElement.style.background='linear-gradient(135deg, #0e9a94 0%, #294842 100%)'"
+      />
+      <div class="hero-overlay"></div>
+    </div>
     <div class="container hero-inner">
       <div class="hero-content">
-        <span class="tag">Online & offline zichtbaarheid</span>
+        <div class="hero-pill">
+          <span class="hero-pill-dot"></span>
+          Jouw zichtbaarheidspartner in Twente
+        </div>
         <h1>
-          Jouw bedrijf<br />
-          <span class="hero-accent">zichtbaar</span> gemaakt.
+          Zorg dat ze<br />
+          <span class="hero-accent">jou zien.</span>
         </h1>
-        <p class="hero-sub">
-          Van professionele fotografie tot social media en een sterke website.
-          Peter zorgt dat jouw bedrijf gezien wordt — door de juiste mensen, op het juiste moment.
+        <p>
+          Peter Rutgers helpt ondernemers en bedrijven in Twente om online én offline meer op te vallen.
+          Van fotografie en social media tot websites die écht werken.
         </p>
         <div class="hero-actions">
           <a href="/contact" class="btn btn-primary">
             Gratis kennismaking
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
             </svg>
           </a>
-          <a href="/diensten" class="btn btn-secondary">Bekijk diensten</a>
+          <a href="/diensten" class="btn btn-outline-white">Bekijk diensten</a>
         </div>
-        <div class="hero-stats">
-          <div class="stat">
-            <span class="stat-number">100+</span>
-            <span class="stat-label">Tevreden klanten</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat">
-            <span class="stat-number">8+</span>
-            <span class="stat-label">Jaar ervaring</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat">
-            <span class="stat-number">3-in-1</span>
-            <span class="stat-label">Foto, social & web</span>
-          </div>
+        <div class="hero-locaties">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+          </svg>
+          Nijverdal · Almelo · Hengelo · Enschede & heel Twente
         </div>
       </div>
-      <div class="hero-visual">
-        <div class="hero-card hero-card-main">
-          <div class="hero-card-icon">📸</div>
-          <h3>Fotografie</h3>
-          <p>Professionele beelden die jouw merk neerzetten</p>
+      <div class="hero-cards">
+        <div class="hero-stat-card">
+          <span class="hsc-val">100+</span>
+          <span class="hsc-lbl">Tevreden klanten</span>
         </div>
-        <div class="hero-card hero-card-sm hero-card-top">
-          <div class="hero-card-icon">📱</div>
-          <h3>Social Media</h3>
-          <p>Strategie die werkt</p>
+        <div class="hero-stat-card hero-stat-yellow">
+          <span class="hsc-val">8+</span>
+          <span class="hsc-lbl">Jaar ervaring</span>
         </div>
-        <div class="hero-card hero-card-sm hero-card-bottom">
-          <div class="hero-card-icon">💻</div>
-          <h3>Website</h3>
-          <p>Vindbaar & converterend</p>
+        <div class="hero-stat-card hero-stat-sky">
+          <span class="hsc-val">3-in-1</span>
+          <span class="hsc-lbl">Foto · Social · Web</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- VERTROUWEN BAR -->
-  <section class="trust-bar">
+  <!-- ===== DIENSTEN STRIP ===== -->
+  <section class="diensten-strip">
     <div class="container">
-      <p class="trust-label">Vertrouwd door ondernemers in heel Nederland</p>
-      <div class="trust-logos">
-        <span>Bakker & Zn.</span>
-        <span>Studio Linde</span>
-        <span>De Groene Keuken</span>
-        <span>MT Advies</span>
-        <span>Florist Amsterdam</span>
-        <span>Tech for SME</span>
+      <div class="strip-header">
+        <span class="tag">Wat Peter doet</span>
+        <h2>Drie diensten,<br />één doel: <em>gezien worden</em></h2>
       </div>
-    </div>
-  </section>
-
-  <!-- WAT PETER DOET -->
-  <section class="services">
-    <div class="container">
-      <div class="section-header">
-        <span class="tag">Diensten</span>
-        <h2>Alles wat je nodig hebt<br />voor meer zichtbaarheid</h2>
-        <p>Geen losse stukjes, maar een complete aanpak. Peter combineert fotografie, social media en webdesign tot een coherent verhaal.</p>
-      </div>
-
-      <div class="services-grid">
-        <a href="/diensten/fotografie" class="service-card service-card-large">
-          <div class="service-bg service-bg-foto"></div>
-          <div class="service-content">
-            <div class="service-icon">📸</div>
+      <div class="strip-grid">
+        <a href="/diensten/fotografie" class="strip-card strip-foto">
+          <div class="strip-img">
+            <img
+              src="https://fotograafpeter.nl/images/services/bedrijf-portret.jpg"
+              alt="Bedrijfsfotografie door Peter"
+              onerror="this.style.display='none'"
+            />
+            <div class="strip-img-overlay"></div>
+            <span class="strip-num">01</span>
+          </div>
+          <div class="strip-body">
             <h3>Fotografie</h3>
-            <p>Bedrijfsportretten, productfotografie en reportages die jouw verhaal vertellen. Beelden die je doelgroep raken en onthouden.</p>
-            <span class="service-link">
-              Meer over fotografie
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-              </svg>
-            </span>
+            <p>Echte beelden die jouw verhaal vertellen. Geen stockfoto's — wel professioneel.</p>
+            <span class="strip-cta">Meer over fotografie →</span>
           </div>
         </a>
 
-        <a href="/diensten/social-media" class="service-card">
-          <div class="service-bg service-bg-social"></div>
-          <div class="service-content">
-            <div class="service-icon">📱</div>
+        <a href="/diensten/social-media" class="strip-card strip-social">
+          <div class="strip-img strip-img-teal">
+            <img
+              src="https://fotograafpeter.nl/images/services/bedrijf-sfeer.jpg"
+              alt="Social media door Peter"
+              onerror="this.style.display='none'"
+            />
+            <div class="strip-img-overlay"></div>
+            <span class="strip-num">02</span>
+          </div>
+          <div class="strip-body">
             <h3>Social Media</h3>
-            <p>Strategie, contentcreatie en beheer van jouw social media kanalen. Consistente aanwezigheid die volgers omzet in klanten.</p>
-            <span class="service-link">
-              Meer over social media
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-              </svg>
-            </span>
+            <p>Strategie en content die jouw doelgroep bereikt en vasthoudt.</p>
+            <span class="strip-cta">Meer over social media →</span>
           </div>
         </a>
 
-        <a href="/diensten/websites" class="service-card">
-          <div class="service-bg service-bg-web"></div>
-          <div class="service-content">
-            <div class="service-icon">💻</div>
+        <a href="/diensten/websites" class="strip-card strip-web">
+          <div class="strip-img strip-img-yellow">
+            <img
+              src="https://fotograafpeter.nl/images/services/bedrijf-werk.jpg"
+              alt="Website door Peter"
+              onerror="this.style.display='none'"
+            />
+            <div class="strip-img-overlay"></div>
+            <span class="strip-num">03</span>
+          </div>
+          <div class="strip-body">
             <h3>Websites</h3>
-            <p>Websites die niet alleen mooi zijn, maar ook gevonden worden. SEO-geoptimaliseerd, snel en gebouwd voor conversie.</p>
-            <span class="service-link">
-              Meer over websites
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-              </svg>
-            </span>
+            <p>Vindbaar, snel en gebouwd om bezoekers om te zetten in klanten.</p>
+            <span class="strip-cta">Meer over websites →</span>
           </div>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- HOE HET WERKT -->
-  <section class="how-it-works">
-    <div class="container">
-      <div class="how-inner">
-        <div class="how-text">
-          <span class="tag">Werkwijze</span>
-          <h2>Van kennismaking tot resultaat</h2>
-          <p>Geen gedoe, geen verrassingen. Peter werkt met een helder proces zodat jij weet wat je kunt verwachten.</p>
-
-          <div class="steps">
-            <div class="step">
-              <div class="step-num">1</div>
-              <div class="step-body">
-                <h4>Gratis kennismaking</h4>
-                <p>We bespreken jouw doelen, uitdagingen en wat je wil bereiken. Geen verplichtingen.</p>
-              </div>
-            </div>
-            <div class="step">
-              <div class="step-num">2</div>
-              <div class="step-body">
-                <h4>Aanpak op maat</h4>
-                <p>Peter stelt een plan samen dat past bij jouw bedrijf, budget en tijdlijn.</p>
-              </div>
-            </div>
-            <div class="step">
-              <div class="step-num">3</div>
-              <div class="step-body">
-                <h4>Uitvoering & resultaat</h4>
-                <p>Jij doet waar jij goed in bent. Peter zorgt dat jouw bedrijf gezien wordt.</p>
-              </div>
-            </div>
-          </div>
-
-          <a href="/contact" class="btn btn-primary">Plan een kennismaking</a>
+  <!-- ===== PETER INTRO ===== -->
+  <section class="peter-intro">
+    <div class="container peter-intro-inner">
+      <div class="peter-photo-wrap">
+        <div class="peter-photo-border">
+          <img
+            src="https://fotograafpeter.nl/images/headers/home.jpg"
+            alt="Peter Rutgers — Bel Peter"
+            class="peter-photo"
+            onerror="this.parentElement.parentElement.style.background='var(--teal)'"
+          />
         </div>
-        <div class="how-visual">
-          <div class="how-quote-card">
-            <div class="quote-stars">★★★★★</div>
-            <p class="quote-text">"Peter heeft onze zichtbaarheid in korte tijd enorm vergroot. De foto's, de website én de social media passen nu perfect bij wie we zijn."</p>
-            <div class="quote-author">
-              <div class="quote-avatar">JB</div>
-              <div>
-                <strong>Janneke Bakker</strong>
-                <span>Eigenaar Bakker & Zn.</span>
-              </div>
-            </div>
+        <div class="peter-badge">
+          <span>📍</span>
+          <span>Nijverdal, Twente</span>
+        </div>
+      </div>
+      <div class="peter-text">
+        <span class="tag tag-yellow">Wie is Peter?</span>
+        <h2>Jouw zichtbaarheid<br />is mijn vak</h2>
+        <p>
+          Ik ben <strong>Peter Rutgers</strong> uit Nijverdal. Ik help ondernemers en bedrijven in Twente om op te vallen — online én offline. Niet met loze beloftes, maar met fotografie die klopt, social media die werkt en websites die gevonden worden.
+        </p>
+        <p>
+          Als lokale partner ken ik Twente. Ik weet hoe ondernemers hier werken en wat hun klanten zoeken. Dat maakt het verschil.
+        </p>
+        <div class="peter-stats-row">
+          <div class="psr-item">
+            <strong>Fotografie</strong>
+            <span>Bedrijf, personal branding & product</span>
           </div>
-          <div class="how-metric">
-            <div class="metric-item">
-              <span class="metric-val" style="color: var(--teal)">+340%</span>
-              <span class="metric-lbl">Meer websitebezoekers</span>
-            </div>
-            <div class="metric-item">
-              <span class="metric-val" style="color: var(--yellow); filter: brightness(0.8)">+180%</span>
-              <span class="metric-lbl">Meer Instagram bereik</span>
-            </div>
+          <div class="psr-item">
+            <strong>Social Media</strong>
+            <span>Instagram, LinkedIn & Facebook</span>
+          </div>
+          <div class="psr-item">
+            <strong>Websites</strong>
+            <span>SEO-proof & converterend</span>
           </div>
         </div>
+        <a href="/over" class="btn btn-teal">Lees Peter's verhaal</a>
       </div>
     </div>
   </section>
 
-  <!-- WHY PETER -->
-  <section class="why-peter">
+  <!-- ===== HOE HET WERKT ===== -->
+  <section class="hoe-werkt">
     <div class="container">
       <div class="section-header">
-        <span class="tag">Waarom Bel Peter?</span>
-        <h2>Één aanspreekpunt,<br />complete zichtbaarheid</h2>
+        <span class="tag">Werkwijze</span>
+        <h2>Van gesprek tot resultaat</h2>
+        <p>Een heldere aanpak zonder gedoe. Jij weet precies wat je kunt verwachten.</p>
       </div>
+      <div class="stappen">
+        <div class="stap">
+          <div class="stap-icon stap-icon-teal">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <div class="stap-lijn"></div>
+          <h3>Gratis kennismaking</h3>
+          <p>We bespreken jouw bedrijf, doelen en uitdagingen. Geen verplichtingen, gewoon een eerlijk gesprek.</p>
+        </div>
+        <div class="stap">
+          <div class="stap-icon stap-icon-yellow">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+          </div>
+          <div class="stap-lijn"></div>
+          <h3>Aanpak op maat</h3>
+          <p>Peter stelt een plan samen dat past bij jouw situatie, budget en ambities in Twente.</p>
+        </div>
+        <div class="stap">
+          <div class="stap-icon stap-icon-sky">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+            </svg>
+          </div>
+          <div class="stap-lijn" style="display:none"></div>
+          <h3>Zichtbaar resultaat</h3>
+          <p>Jij doet wat jij goed kan. Peter zorgt dat jouw bedrijf gezien wordt door de juiste mensen.</p>
+        </div>
+      </div>
+      <div class="hoe-werkt-cta">
+        <a href="/contact" class="btn btn-primary">Start met een kennismaking</a>
+      </div>
+    </div>
+  </section>
 
-      <div class="why-grid">
-        <div class="why-item">
-          <div class="why-icon">🎯</div>
-          <h4>Strategisch denken</h4>
-          <p>Geen losse acties, maar een samenhangende aanpak die bijdraagt aan jouw bedrijfsdoelen.</p>
+  <!-- ===== PORTFOLIO TEASER ===== -->
+  <section class="portfolio-teaser">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag tag-sky">Portfolio</span>
+        <h2>Beelden die werken</h2>
+        <p>Een greep uit het werk van Peter voor ondernemers in Twente en omgeving.</p>
+      </div>
+      <div class="portfolio-grid">
+        <div class="pgrid-item pgrid-tall">
+          <img
+            src="https://fotograafpeter.nl/images/headers/bedrijfsfotografie.jpg"
+            alt="Bedrijfsfotografie Twente"
+            onerror="this.parentElement.style.background='var(--teal)'"
+          />
+          <div class="pgrid-label">Bedrijfsfotografie</div>
         </div>
-        <div class="why-item">
-          <div class="why-icon">⚡</div>
-          <h4>Snel & persoonlijk</h4>
-          <p>Je hebt altijd rechtstreeks contact met Peter. Geen tussenpersonen, geen vertraagde communicatie.</p>
+        <div class="pgrid-item">
+          <img
+            src="https://fotograafpeter.nl/images/services/bedrijf-portret.jpg"
+            alt="Zakelijk portret Nijverdal"
+            onerror="this.parentElement.style.background='var(--forest)'"
+          />
+          <div class="pgrid-label">Zakelijk portret</div>
         </div>
-        <div class="why-item">
-          <div class="why-icon">🔗</div>
-          <h4>Alles in samenhang</h4>
-          <p>Foto's voor je website, die ook op social media werken. Consistentie in iedere uitingsvorm.</p>
+        <div class="pgrid-item">
+          <img
+            src="https://fotograafpeter.nl/images/services/bedrijf-sfeer.jpg"
+            alt="Sfeerreportage Twente"
+            onerror="this.parentElement.style.background='var(--dark)'"
+          />
+          <div class="pgrid-label">Sfeer & locatie</div>
         </div>
-        <div class="why-item">
-          <div class="why-icon">📈</div>
-          <h4>Meetbaar resultaat</h4>
-          <p>Peter werkt met duidelijke doelen en rapporteert regelmatig over wat er bereikt wordt.</p>
+        <div class="pgrid-item">
+          <img
+            src="https://fotograafpeter.nl/images/services/bedrijf-werk.jpg"
+            alt="Aan het werk reportage"
+            onerror="this.parentElement.style.background='#1a3a34'"
+          />
+          <div class="pgrid-label">Aan het werk</div>
         </div>
-        <div class="why-item">
-          <div class="why-icon">🤝</div>
-          <h4>Langdurige samenwerking</h4>
-          <p>Geen eenmalige transactie, maar een partner die meegroeit met jouw bedrijf.</p>
+      </div>
+      <div style="text-align:center;margin-top:36px;">
+        <a href="https://fotograafpeter.nl" target="_blank" rel="noopener" class="btn btn-teal">
+          Bekijk volledig portfolio
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REVIEWS ===== -->
+  <section class="reviews-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">Klanten aan het woord</span>
+        <h2>Wat Twentse ondernemers<br />over Peter zeggen</h2>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p>"Peter heeft onze zichtbaarheid in korte tijd enorm vergroot. De foto's, de website én de social media passen nu perfect bij wie we zijn."</p>
+          <div class="review-author">
+            <div class="review-av">JB</div>
+            <div>
+              <strong>Janneke Bakker</strong>
+              <span>Bakker & Zn. · Nijverdal</span>
+            </div>
+          </div>
         </div>
-        <div class="why-item">
-          <div class="why-icon">💡</div>
-          <h4>Eerlijk advies</h4>
-          <p>Peter adviseert wat écht werkt voor jouw bedrijf, ook als dat betekent dat je iets anders nodig hebt.</p>
+        <div class="review-card review-card-teal">
+          <div class="review-stars">★★★★★</div>
+          <p>"Eindelijk een website die ook gevonden wordt. Peter heeft alles goed uitgelegd en is altijd snel te bereiken. Aanrader voor elke Twentse ondernemer!"</p>
+          <div class="review-author">
+            <div class="review-av" style="background:var(--yellow);color:var(--dark)">TM</div>
+            <div>
+              <strong>Thomas Meijer</strong>
+              <span>MT Advies · Almelo</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p>"De foto's die Peter heeft gemaakt zijn prachtig en worden overal gebruikt. Echt een investering die zijn geld waard is. Heel persoonlijk contact ook."</p>
+          <div class="review-author">
+            <div class="review-av" style="background:var(--sky);color:var(--dark)">LV</div>
+            <div>
+              <strong>Lisa van Dijk</strong>
+              <span>Studio Linde · Hengelo</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA BANNER -->
+  <!-- ===== WERKGEBIED ===== -->
+  <section class="werkgebied">
+    <div class="container werkgebied-inner">
+      <div class="wg-text">
+        <span class="tag">Werkgebied</span>
+        <h2>Lokaal verankerd,<br />regionaal actief</h2>
+        <p>Peter werkt vanuit <strong>Nijverdal</strong> en is actief in heel Twente en Overijssel. Omdat hij hier zelf vandaan komt, kent hij de regio en de mensen.</p>
+        <div class="wg-steden">
+          {['Nijverdal', 'Hellendoorn', 'Wierden', 'Rijssen', 'Almelo', 'Hengelo', 'Enschede', 'Deventer', 'Zwolle'].map(stad => (
+            <span class="wg-stad">{stad}</span>
+          ))}
+        </div>
+        <p class="wg-note">Buiten Twente? Stuur een bericht — vrijwel alles is bespreekbaar.</p>
+        <a href="/contact" class="btn btn-teal">Plan een afspraak</a>
+      </div>
+      <div class="wg-visual">
+        <div class="wg-map-placeholder">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="wg-svg">
+            <circle cx="100" cy="100" r="90" fill="var(--teal-light)" stroke="var(--teal)" stroke-width="2"/>
+            <circle cx="100" cy="100" r="60" fill="var(--teal)" opacity="0.15"/>
+            <circle cx="100" cy="100" r="8" fill="var(--teal)"/>
+            <circle cx="100" cy="100" r="18" fill="none" stroke="var(--teal)" stroke-width="2" stroke-dasharray="4 4"/>
+            <text x="100" y="155" text-anchor="middle" font-family="sans-serif" font-weight="700" font-size="14" fill="var(--teal-dark)">Twente</text>
+            <!-- dots -->
+            <circle cx="80" cy="85" r="4" fill="var(--yellow)"/>
+            <circle cx="120" cy="90" r="4" fill="var(--yellow)"/>
+            <circle cx="110" cy="115" r="4" fill="var(--yellow)"/>
+            <circle cx="75" cy="110" r="4" fill="var(--yellow)"/>
+            <circle cx="140" cy="100" r="4" fill="var(--sky)"/>
+            <circle cx="65" cy="100" r="4" fill="var(--sky)"/>
+          </svg>
+          <div class="wg-pin">
+            <svg width="28" height="36" viewBox="0 0 28 36" fill="none">
+              <path d="M14 0C6.27 0 0 6.27 0 14c0 10.5 14 22 14 22s14-11.5 14-22C28 6.27 21.73 0 14 0z" fill="var(--teal)"/>
+              <circle cx="14" cy="14" r="5" fill="white"/>
+            </svg>
+            <span>Nijverdal</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA BANNER ===== -->
   <section class="cta-banner">
     <div class="container">
       <div class="cta-inner">
         <div class="cta-text">
-          <h2>Klaar om zichtbaarder te worden?</h2>
-          <p>Neem contact op voor een gratis kennismaking. Zonder verplichtingen, gewoon een goed gesprek.</p>
+          <h2>Klaar om zichtbaarder<br />te worden in Twente?</h2>
+          <p>Bel Peter of stuur een berichtje. De kennismaking is gratis en vrijblijvend.</p>
         </div>
         <div class="cta-actions">
-          <a href="/contact" class="btn btn-primary">Bel Peter nu</a>
-          <a href="mailto:peter@belpeter.nl" class="btn btn-secondary">Stuur een mail</a>
+          <a href="tel:+31851155136" class="btn btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16"/>
+            </svg>
+            085 115 5136
+          </a>
+          <a href="/contact" class="btn btn-outline-white">Stuur een bericht</a>
         </div>
       </div>
     </div>
@@ -260,168 +380,562 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style>
+/* ===== HERO ===== */
 .hero {
-  background: var(--dark);
-  color: var(--white);
-  padding: 80px 0 100px;
-  overflow: hidden;
   position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--dark);
 }
 
-.hero::before {
-  content: '';
+.hero-bg-image {
   position: absolute;
-  top: -200px;
-  right: -100px;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(21,186,179,0.15) 0%, transparent 70%);
-  pointer-events: none;
+  inset: 0;
+}
+
+.hero-bg-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, rgba(20,18,19,0.88) 0%, rgba(20,18,19,0.5) 60%, rgba(20,18,19,0.2) 100%);
 }
 
 .hero-inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+  padding-top: 48px;
+  padding-bottom: 48px;
 }
 
-.hero-content .tag {
-  background: rgba(21,186,179,0.2);
-  color: var(--teal);
+.hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: var(--white);
+  padding: 7px 16px;
+  border-radius: 100px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
   margin-bottom: 20px;
-  display: inline-block;
+  backdrop-filter: blur(8px);
+}
+
+.hero-pill-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--teal);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(0.8); }
 }
 
 .hero-content h1 {
-  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-size: clamp(3rem, 7vw, 5.5rem);
   font-weight: 800;
   color: var(--white);
+  letter-spacing: -0.04em;
   margin-bottom: 20px;
+  line-height: 1.05;
+}
+
+.hero-accent {
+  color: var(--yellow);
+  display: block;
+}
+
+.hero-content p {
+  font-size: 1.15rem;
+  color: rgba(255,255,255,0.8);
+  max-width: 460px;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 28px; }
+
+.hero-locaties {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.5);
+}
+
+.hero-locaties svg { color: var(--teal); flex-shrink: 0; }
+
+.hero-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.hero-stat-card {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: var(--radius-lg);
+  padding: 20px 28px;
+  min-width: 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hero-stat-yellow { background: rgba(255,240,1,0.15); border-color: rgba(255,240,1,0.3); }
+.hero-stat-sky { background: rgba(125,211,252,0.12); border-color: rgba(125,211,252,0.25); }
+
+.hsc-val {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.8rem;
+  color: var(--white);
   letter-spacing: -0.03em;
 }
 
-.hero-accent { color: var(--yellow); }
+.hero-stat-yellow .hsc-val { color: var(--yellow); }
+.hero-stat-sky .hsc-val { color: var(--sky); }
 
-.hero-sub {
-  font-size: 1.1rem;
+.hsc-lbl {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.55);
+  font-weight: 500;
+}
+
+/* ===== DIENSTEN STRIP ===== */
+.diensten-strip {
+  background: var(--teal);
+  padding: 0 0 88px;
+}
+
+.strip-header {
+  background: var(--teal);
+  padding: 72px 0 56px;
+  text-align: center;
+}
+
+.strip-header .tag {
+  background: rgba(255,255,255,0.2);
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+.strip-header h2 {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: -0.03em;
+}
+
+.strip-header h2 em {
+  font-style: normal;
+  color: var(--yellow);
+}
+
+.strip-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.strip-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: block;
+  color: var(--dark);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.strip-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 56px rgba(0,0,0,0.18);
+}
+
+.strip-img {
+  position: relative;
+  height: 220px;
+  background: var(--dark);
+  overflow: hidden;
+}
+
+.strip-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.strip-card:hover .strip-img img { transform: scale(1.04); }
+
+.strip-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(20,18,19,0.35);
+}
+
+.strip-img-teal .strip-img-overlay { background: rgba(21,186,179,0.4); }
+.strip-img-yellow .strip-img-overlay { background: rgba(255,240,1,0.3); }
+
+.strip-num {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.75rem;
   color: rgba(255,255,255,0.7);
-  max-width: 460px;
-  margin-bottom: 32px;
-  line-height: 1.7;
+  letter-spacing: 0.1em;
+  background: rgba(0,0,0,0.3);
+  padding: 4px 10px;
+  border-radius: 100px;
+  backdrop-filter: blur(8px);
 }
 
-.hero-actions {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-bottom: 40px;
+.strip-body { padding: 24px; }
+.strip-body h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 8px; letter-spacing: -0.02em; }
+.strip-body p { font-size: 0.88rem; color: var(--gray-text); line-height: 1.6; margin-bottom: 14px; }
+.strip-cta { font-size: 0.85rem; font-weight: 700; color: var(--teal); font-family: var(--font-display); }
+
+/* ===== PETER INTRO ===== */
+.peter-intro { background: var(--off-white); }
+
+.peter-intro-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 64px;
+  align-items: center;
 }
 
-.hero-stats {
+.peter-photo-wrap { position: relative; }
+
+.peter-photo-border {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 5px solid var(--teal);
+  aspect-ratio: 4/5;
+}
+
+.peter-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.peter-badge {
+  position: absolute;
+  bottom: -16px;
+  right: -16px;
+  background: var(--yellow);
+  color: var(--dark);
+  padding: 10px 18px;
+  border-radius: 100px;
+  font-size: 0.82rem;
+  font-weight: 700;
   display: flex;
   align-items: center;
+  gap: 6px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.peter-text .tag { margin-bottom: 16px; }
+
+.peter-text h2 {
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 20px;
+}
+
+.peter-text p {
+  color: var(--gray-text);
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+
+.peter-text p strong { color: var(--dark); }
+
+.peter-stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 28px 0;
+}
+
+.psr-item {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 14px;
+  border-left: 3px solid var(--teal);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.psr-item strong { font-size: 0.85rem; font-weight: 700; color: var(--dark); }
+.psr-item span { font-size: 0.75rem; color: var(--gray-text); }
+
+/* ===== HOE WERKT HET ===== */
+.hoe-werkt { background: var(--dark); }
+
+.hoe-werkt .section-header .tag {
+  background: rgba(21,186,179,0.2);
+  color: var(--teal);
+}
+
+.hoe-werkt .section-header h2 { color: var(--white); }
+.hoe-werkt .section-header p { color: rgba(255,255,255,0.6); }
+
+.stappen {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  position: relative;
+}
+
+.stap {
+  text-align: center;
+  padding: 0 40px;
+  position: relative;
+}
+
+.stap:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 36px;
+  right: -1px;
+  width: 2px;
+  height: 40px;
+  background: rgba(255,255,255,0.1);
+}
+
+.stap-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  color: var(--white);
+}
+
+.stap-icon-teal { background: var(--teal); }
+.stap-icon-yellow { background: var(--yellow); color: var(--dark) !important; }
+.stap-icon-sky { background: var(--sky); color: var(--dark) !important; }
+
+.stap h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.stap p {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.65;
+}
+
+.hoe-werkt-cta { text-align: center; margin-top: 48px; }
+
+/* ===== PORTFOLIO ===== */
+.portfolio-teaser { background: var(--gray-light); }
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  grid-template-rows: 260px 260px;
+  gap: 16px;
+}
+
+.pgrid-item {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--dark);
+}
+
+.pgrid-tall { grid-row: 1 / 3; }
+
+.pgrid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.pgrid-item:hover img { transform: scale(1.04); }
+
+.pgrid-label {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: rgba(20,18,19,0.75);
+  color: var(--white);
+  padding: 5px 12px;
+  border-radius: 100px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  backdrop-filter: blur(6px);
+}
+
+/* ===== REVIEWS ===== */
+.reviews-section { background: var(--white); }
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
-.stat { display: flex; flex-direction: column; gap: 2px; }
-.stat-number { font-family: var(--font-display); font-weight: 800; font-size: 1.5rem; color: var(--white); }
-.stat-label { font-size: 0.78rem; color: rgba(255,255,255,0.5); }
-.stat-divider { width: 1px; height: 36px; background: rgba(255,255,255,0.15); }
-
-.hero-visual { position: relative; height: 420px; }
-
-.hero-card {
-  position: absolute;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.12);
+.review-card {
   border-radius: var(--radius-lg);
-  padding: 24px;
-  backdrop-filter: blur(12px);
-  transition: transform 0.3s ease;
+  padding: 32px;
+  background: var(--gray-light);
+  border: 2px solid transparent;
+  transition: border-color 0.2s, transform 0.2s;
 }
 
-.hero-card:hover { transform: translateY(-4px); }
-.hero-card-main { bottom: 0; left: 0; right: 160px; }
-.hero-card-sm { right: 0; width: 150px; }
-.hero-card-top { top: 30px; }
-.hero-card-bottom { bottom: 80px; }
-.hero-card-icon { font-size: 2rem; margin-bottom: 10px; }
-.hero-card h3 { font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: 4px; }
-.hero-card p { font-size: 0.8rem; color: rgba(255,255,255,0.6); line-height: 1.5; }
+.review-card:hover { border-color: var(--teal); transform: translateY(-3px); }
 
-.trust-bar { background: var(--gray-light); padding: 28px 0; }
-.trust-label { font-size: 0.8rem; color: var(--gray-text); text-align: center; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 16px; }
-.trust-logos { display: flex; justify-content: center; flex-wrap: wrap; gap: 32px; }
-.trust-logos span { font-family: var(--font-display); font-weight: 700; font-size: 0.9rem; color: var(--gray-text); }
+.review-card-teal {
+  background: var(--teal);
+}
 
-.section-header { text-align: center; max-width: 600px; margin: 0 auto 56px; }
-.section-header h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 800; margin: 12px 0 16px; letter-spacing: -0.03em; }
-.section-header p { color: var(--gray-text); font-size: 1rem; line-height: 1.7; }
+.review-card-teal .review-stars,
+.review-card-teal p { color: var(--white) !important; }
 
-.services-grid { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; gap: 20px; }
-.service-card { position: relative; border-radius: var(--radius-lg); overflow: hidden; background: var(--gray-light); transition: transform 0.2s ease, box-shadow 0.2s ease; display: block; }
-.service-card:hover { transform: translateY(-4px); box-shadow: 0 20px 48px rgba(0,0,0,0.1); }
-.service-card-large { grid-row: 1 / 3; }
-.service-bg { height: 200px; }
-.service-card-large .service-bg { height: 280px; }
-.service-bg-foto { background: linear-gradient(135deg, var(--dark) 0%, var(--forest) 100%); }
-.service-bg-social { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); }
-.service-bg-web { background: linear-gradient(135deg, var(--forest) 0%, #1a3a34 100%); }
-.service-content { padding: 24px; }
-.service-icon { font-size: 1.8rem; margin-bottom: 10px; }
-.service-content h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 8px; color: var(--dark); }
-.service-card-large .service-content h3 { font-size: 1.4rem; }
-.service-content p { font-size: 0.88rem; color: var(--gray-text); line-height: 1.6; margin-bottom: 16px; }
-.service-link { display: inline-flex; align-items: center; gap: 6px; font-size: 0.88rem; font-weight: 600; color: var(--teal); font-family: var(--font-display); }
+.review-stars { color: #f0b429; font-size: 1rem; letter-spacing: 2px; margin-bottom: 14px; }
 
-.how-it-works { background: var(--gray-light); }
-.how-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-.how-text h2 { font-size: clamp(1.8rem, 2.5vw, 2.4rem); font-weight: 800; margin: 12px 0 16px; letter-spacing: -0.03em; }
-.how-text > p { color: var(--gray-text); margin-bottom: 32px; line-height: 1.7; }
-.steps { display: flex; flex-direction: column; gap: 24px; margin-bottom: 32px; }
-.step { display: flex; gap: 16px; align-items: flex-start; }
-.step-num { width: 36px; height: 36px; border-radius: 50%; background: var(--teal); color: var(--white); font-family: var(--font-display); font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.step-body h4 { font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
-.step-body p { font-size: 0.88rem; color: var(--gray-text); line-height: 1.6; }
+.review-card p {
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: var(--dark);
+  font-style: italic;
+  margin-bottom: 22px;
+}
 
-.how-quote-card { background: var(--white); border-radius: var(--radius-lg); padding: 28px; box-shadow: 0 8px 32px rgba(0,0,0,0.08); margin-bottom: 16px; }
-.quote-stars { color: #f0b429; font-size: 1rem; letter-spacing: 2px; margin-bottom: 14px; }
-.quote-text { font-size: 0.95rem; line-height: 1.7; color: var(--dark); font-style: italic; margin-bottom: 20px; }
-.quote-author { display: flex; align-items: center; gap: 12px; }
-.quote-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--teal); color: var(--white); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem; flex-shrink: 0; }
-.quote-author strong { display: block; font-size: 0.9rem; font-weight: 600; }
-.quote-author span { font-size: 0.8rem; color: var(--gray-text); }
-.how-metric { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.metric-item { background: var(--white); border-radius: var(--radius-lg); padding: 20px; box-shadow: 0 4px 16px rgba(0,0,0,0.06); display: flex; flex-direction: column; gap: 4px; }
-.metric-val { font-family: var(--font-display); font-weight: 800; font-size: 1.6rem; }
-.metric-lbl { font-size: 0.78rem; color: var(--gray-text); }
+.review-author { display: flex; align-items: center; gap: 12px; }
+.review-av { width: 42px; height: 42px; border-radius: 50%; background: var(--teal); color: var(--white); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.82rem; flex-shrink: 0; }
+.review-author strong { display: block; font-size: 0.9rem; font-weight: 700; color: var(--dark); }
+.review-card-teal .review-author strong { color: var(--white); }
+.review-author span { font-size: 0.78rem; color: var(--gray-text); }
+.review-card-teal .review-author span { color: rgba(255,255,255,0.7); }
 
-.why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
-.why-item { padding: 28px; background: var(--gray-light); border-radius: var(--radius-lg); transition: transform 0.2s; }
-.why-item:hover { transform: translateY(-2px); }
-.why-icon { font-size: 1.8rem; margin-bottom: 12px; }
-.why-item h4 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
-.why-item p { font-size: 0.88rem; color: var(--gray-text); line-height: 1.6; }
+/* ===== WERKGEBIED ===== */
+.werkgebied { background: var(--teal-light); }
 
-.cta-banner { background: linear-gradient(135deg, var(--forest) 0%, var(--dark) 100%); padding: 72px 0; }
-.cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 40px; }
-.cta-text h2 { font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 800; color: var(--white); margin-bottom: 10px; letter-spacing: -0.03em; }
-.cta-text p { color: rgba(255,255,255,0.7); font-size: 1rem; }
-.cta-actions { display: flex; gap: 12px; flex-shrink: 0; }
+.werkgebied-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.wg-text .tag { margin-bottom: 16px; }
+.wg-text h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 16px; }
+.wg-text > p { color: var(--gray-text); line-height: 1.7; margin-bottom: 20px; }
+
+.wg-steden {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.wg-stad {
+  background: var(--white);
+  border: 2px solid var(--teal);
+  color: var(--teal-dark);
+  padding: 5px 14px;
+  border-radius: 100px;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.wg-note { font-size: 0.82rem; color: var(--gray-text); margin-bottom: 24px; }
+
+.wg-visual { display: flex; align-items: center; justify-content: center; }
+
+.wg-map-placeholder {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wg-svg { width: 100%; height: 100%; }
+
+.wg-pin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.wg-pin span {
+  background: var(--teal);
+  color: var(--white);
+  padding: 3px 10px;
+  border-radius: 100px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .strip-grid { grid-template-columns: 1fr 1fr; }
+  .strip-card:last-child { grid-column: 1 / -1; }
+  .portfolio-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+  .pgrid-tall { grid-row: auto; }
+}
 
 @media (max-width: 900px) {
-  .hero-inner, .how-inner { grid-template-columns: 1fr; }
-  .hero-visual { display: none; }
-  .services-grid { grid-template-columns: 1fr; }
-  .service-card-large { grid-row: auto; }
-  .why-grid { grid-template-columns: 1fr 1fr; }
-  .cta-inner { flex-direction: column; text-align: center; }
+  .hero-inner { flex-direction: column; align-items: flex-start; }
+  .hero-cards { flex-direction: row; flex-wrap: wrap; }
+  .hero-stat-card { min-width: 130px; }
+  .peter-intro-inner { grid-template-columns: 1fr; }
+  .peter-photo-wrap { max-width: 320px; margin: 0 auto; }
+  .peter-stats-row { grid-template-columns: 1fr; }
+  .stappen { grid-template-columns: 1fr; gap: 32px; }
+  .stap:not(:last-child)::after { display: none; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .werkgebied-inner { grid-template-columns: 1fr; }
+  .wg-visual { display: none; }
+  .strip-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 600px) {
-  .why-grid { grid-template-columns: 1fr; }
-  .hero-stats { flex-wrap: wrap; gap: 16px; }
-  .hero-actions, .cta-actions { flex-direction: column; }
+  .hero-content h1 { font-size: 2.8rem; }
+  .hero-cards { display: none; }
+  .portfolio-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
 }
 </style>

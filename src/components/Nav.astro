@@ -15,10 +15,12 @@ const navItems = [
 ];
 ---
 
-<nav class="nav">
+<nav class="nav" id="nav">
   <div class="container nav-inner">
     <a href="/" class="nav-logo">
       <span class="logo-bel">BEL</span><span class="logo-peter">PETER</span>
+      <span class="logo-dot">·</span>
+      <span class="logo-twente">Twente</span>
     </a>
 
     <ul class="nav-links">
@@ -27,8 +29,8 @@ const navItems = [
           <a href={item.href} class="nav-link">
             {item.label}
             {item.children && (
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                <path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+                <path d="M2.5 4.5L6.5 8.5L10.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
               </svg>
             )}
           </a>
@@ -48,12 +50,11 @@ const navItems = [
 
     <a href="/contact" class="btn btn-primary nav-cta">Gratis kennismaking</a>
 
-    <button class="nav-hamburger" id="hamburger" aria-label="Menu openen">
+    <button class="hamburger" id="hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
   </div>
 
-  <!-- Mobile menu -->
   <div class="mobile-menu" id="mobile-menu">
     <ul>
       {navItems.map(item => (
@@ -68,7 +69,11 @@ const navItems = [
           )}
         </li>
       ))}
-      <li><a href="/contact" class="btn btn-primary" style="margin-top:16px;width:100%;justify-content:center;">Gratis kennismaking</a></li>
+      <li>
+        <a href="/contact" class="btn btn-teal" style="margin-top:16px;width:100%;justify-content:center;">
+          Gratis kennismaking
+        </a>
+      </li>
     </ul>
   </div>
 </nav>
@@ -79,38 +84,46 @@ const navItems = [
   top: 0;
   z-index: 100;
   background: var(--white);
-  border-bottom: 1px solid var(--gray-mid);
+  border-bottom: 2px solid var(--teal-light);
   height: var(--nav-height);
+  transition: box-shadow 0.2s;
+}
+
+.nav.scrolled {
+  box-shadow: 0 4px 24px rgba(21,186,179,0.12);
 }
 
 .nav-inner {
   display: flex;
   align-items: center;
   height: var(--nav-height);
-  gap: 40px;
+  gap: 32px;
 }
 
 .nav-logo {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 1.4rem;
+  font-size: 1.25rem;
   letter-spacing: -0.03em;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .logo-bel { color: var(--teal); }
 .logo-peter { color: var(--dark); }
+.logo-dot { color: var(--gray-mid); font-weight: 400; }
+.logo-twente { color: var(--gray-text); font-weight: 600; font-size: 0.85rem; letter-spacing: 0; }
 
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 4px;
+  gap: 2px;
   flex: 1;
 }
 
-.has-dropdown {
-  position: relative;
-}
+.has-dropdown { position: relative; }
 
 .nav-link {
   display: flex;
@@ -118,16 +131,13 @@ const navItems = [
   gap: 4px;
   padding: 8px 14px;
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--dark);
-  border-radius: var(--radius);
-  transition: background 0.15s;
+  border-radius: 100px;
+  transition: background 0.15s, color 0.15s;
 }
 
-.nav-link:hover {
-  background: var(--gray-light);
-  color: var(--teal);
-}
+.nav-link:hover { background: var(--teal-light); color: var(--teal-dark); }
 
 .dropdown {
   display: none;
@@ -135,16 +145,14 @@ const navItems = [
   top: calc(100% + 8px);
   left: 0;
   background: var(--white);
-  border: 1px solid var(--gray-mid);
+  border: 2px solid var(--teal-light);
   border-radius: var(--radius-lg);
   padding: 8px;
   min-width: 240px;
-  box-shadow: 0 16px 40px rgba(0,0,0,0.1);
+  box-shadow: 0 16px 40px rgba(21,186,179,0.15);
 }
 
-.has-dropdown:hover .dropdown {
-  display: block;
-}
+.has-dropdown:hover .dropdown { display: block; }
 
 .dropdown-item {
   display: flex;
@@ -154,30 +162,14 @@ const navItems = [
   transition: background 0.15s;
 }
 
-.dropdown-item:hover {
-  background: var(--gray-light);
-}
+.dropdown-item:hover { background: var(--teal-light); }
 
-.dropdown-label {
-  font-weight: 600;
-  font-size: 0.9rem;
-  color: var(--dark);
-}
+.dropdown-label { font-weight: 700; font-size: 0.9rem; color: var(--dark); }
+.dropdown-desc { font-size: 0.78rem; color: var(--gray-text); margin-top: 2px; }
 
-.dropdown-desc {
-  font-size: 0.8rem;
-  color: var(--gray-text);
-  margin-top: 2px;
-}
+.nav-cta { margin-left: auto; flex-shrink: 0; font-size: 0.875rem; padding: 10px 20px; }
 
-.nav-cta {
-  margin-left: auto;
-  flex-shrink: 0;
-  font-size: 0.875rem;
-  padding: 10px 20px;
-}
-
-.nav-hamburger {
+.hamburger {
   display: none;
   flex-direction: column;
   gap: 5px;
@@ -188,71 +180,43 @@ const navItems = [
   margin-left: auto;
 }
 
-.nav-hamburger span {
-  width: 24px;
-  height: 2px;
+.hamburger span {
+  width: 24px; height: 2.5px;
   background: var(--dark);
   border-radius: 2px;
-  transition: all 0.2s;
 }
 
 .mobile-menu {
   display: none;
   position: absolute;
   top: var(--nav-height);
-  left: 0;
-  right: 0;
+  left: 0; right: 0;
   background: var(--white);
-  border-bottom: 1px solid var(--gray-mid);
-  padding: 20px 24px;
+  border-bottom: 2px solid var(--teal-light);
+  padding: 20px 24px 28px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.08);
 }
 
-.mobile-menu.open {
-  display: block;
-}
-
-.mobile-menu ul {
-  list-style: none;
-}
-
-.mobile-link {
-  display: block;
-  padding: 12px 0;
-  font-weight: 600;
-  font-size: 1rem;
-  border-bottom: 1px solid var(--gray-light);
-  color: var(--dark);
-}
-
-.mobile-sub {
-  padding-left: 16px;
-  margin-bottom: 8px;
-}
-
-.mobile-sub-link {
-  display: block;
-  padding: 8px 0;
-  font-size: 0.9rem;
-  color: var(--gray-text);
-}
+.mobile-menu.open { display: block; }
+.mobile-menu ul { list-style: none; }
+.mobile-link { display: block; padding: 13px 0; font-weight: 700; font-size: 1rem; border-bottom: 1px solid var(--gray-light); color: var(--dark); }
+.mobile-sub { padding-left: 16px; margin-bottom: 8px; }
+.mobile-sub-link { display: block; padding: 8px 0; font-size: 0.9rem; color: var(--gray-text); }
 
 @media (max-width: 900px) {
-  .nav-links, .nav-cta {
-    display: none;
-  }
-  .nav-hamburger {
-    display: flex;
-  }
-  .nav {
-    position: sticky;
-  }
+  .nav-links, .nav-cta { display: none; }
+  .hamburger { display: flex; }
+  .nav { position: sticky; }
 }
 </style>
 
 <script>
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobile-menu');
-hamburger?.addEventListener('click', () => {
-  mobileMenu?.classList.toggle('open');
+hamburger?.addEventListener('click', () => mobileMenu?.classList.toggle('open'));
+
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav?.classList.toggle('scrolled', window.scrollY > 20);
 });
 </script>

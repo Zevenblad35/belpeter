@@ -1,119 +1,97 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 ---
-
 <Layout
-  title="Website Laten Maken — Professioneel & SEO-proof | Bel Peter"
-  description="Laat een professionele website maken door Peter. Snel, mobielvriendelijk en SEO-geoptimaliseerd. Op maat voor ZZP'ers en MKB. Bekijk de mogelijkheden."
+  title="Website Laten Maken Twente — SEO & Vindbaar | Bel Peter"
+  description="Laat een professionele website maken door Peter Rutgers in Twente. Snel, mobielvriendelijk, SEO-geoptimaliseerd. Voor Nijverdal, Almelo, Hengelo en omgeving."
 >
-
-  <section class="service-hero web-hero">
+  <section class="svc-hero" style="background:linear-gradient(135deg, var(--forest) 0%, var(--dark) 100%);padding:88px 0 64px;">
     <div class="container">
-      <span class="tag">Websites</span>
-      <h1>Een website die<br /><span class="accent">voor je werkt</span></h1>
-      <p>Niet alleen mooi, maar ook vindbaar en converterend. Peter bouwt websites die nieuwe klanten aantrekken en bezoekers omzetten in kopers.</p>
-      <div class="hero-actions">
+      <span class="tag" style="background:rgba(125,211,252,0.2);color:var(--sky);">Dienst 03 — Websites</span>
+      <h1 style="font-size:clamp(2rem,4.5vw,3.5rem);font-weight:800;color:var(--white);letter-spacing:-0.03em;margin:16px 0 16px;">Een website die<br /><span style="color:var(--teal)">voor jou werkt</span></h1>
+      <p style="color:rgba(255,255,255,0.8);max-width:520px;font-size:1.05rem;line-height:1.7;margin-bottom:28px;">Niet alleen mooi, maar ook vindbaar. Peter bouwt websites die nieuwe klanten aantrekken — ook in Twente.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;">
         <a href="/contact" class="btn btn-primary">Website aanvragen</a>
-        <a href="#voorbeelden" class="btn btn-secondary">Bekijk aanpak</a>
+        <a href="/contact" class="btn btn-outline-white">Gratis adviesgesprek</a>
       </div>
     </div>
   </section>
 
-  <section class="kenmerken">
+  <section style="background:var(--teal);padding:20px 0;">
+    <div class="container" style="display:flex;justify-content:center;gap:40px;flex-wrap:wrap;">
+      {['SEO-proof','Mobielvriendelijk','Snel & veilig','CMS voor eigen beheer'].map(k => (
+        <div style="display:flex;align-items:center;gap:8px;color:var(--white);font-weight:700;font-size:0.88rem;">
+          <span style="color:var(--yellow);">✓</span>{k}
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section>
     <div class="container">
       <div class="section-header">
-        <span class="tag">Waarom dit werkt</span>
+        <span class="tag">Kenmerken</span>
         <h2>Websites gebouwd<br />voor resultaat</h2>
+        <p>Elke website die Peter bouwt is snel, mobielvriendelijk en geoptimaliseerd om gevonden te worden — ook lokaal in Twente.</p>
       </div>
-      <div class="kenmerken-grid">
-        <div class="kenmerk">
-          <div class="kenmerk-icon">🔍</div>
-          <h3>Gevonden worden</h3>
-          <p>SEO-technisch correct opgebouwd zodat Google je snel vindt. Lokale SEO voor regionale bedrijven.</p>
-        </div>
-        <div class="kenmerk">
-          <div class="kenmerk-icon">⚡</div>
-          <h3>Snel laden</h3>
-          <p>Geoptimaliseerde websites die razendsnel laden op desktop én mobiel. Geen bezoekers kwijtraken door trage laadtijden.</p>
-        </div>
-        <div class="kenmerk">
-          <div class="kenmerk-icon">📱</div>
-          <h3>Mobielvriendelijk</h3>
-          <p>Meer dan 60% van het websiteverkeer is mobiel. Jouw site ziet er op elk apparaat perfect uit.</p>
-        </div>
-        <div class="kenmerk">
-          <div class="kenmerk-icon">🎯</div>
-          <h3>Converterend</h3>
-          <p>Elke pagina heeft één doel: de bezoeker naar actie leiden. Contactformulier, offerte of aankoop.</p>
-        </div>
-        <div class="kenmerk">
-          <div class="kenmerk-icon">🔒</div>
-          <h3>Veilig & stabiel</h3>
-          <p>SSL-certificaat, regelmatige updates en backups. Jouw website is altijd bereikbaar en veilig.</p>
-        </div>
-        <div class="kenmerk">
-          <div class="kenmerk-icon">🛠️</div>
-          <h3>Zelf beheren</h3>
-          <p>Eenvoudig CMS zodat je teksten en foto's zelf kunt aanpassen. Geen technische kennis nodig.</p>
-        </div>
+      <div class="web-kenmerken">
+        {[
+          { icon: '🔍', kleur: 'var(--teal)', title: 'Gevonden worden', desc: 'SEO-technisch correct. Google vindt jou snel, ook lokaal in Twente en Overijssel.' },
+          { icon: '⚡', kleur: 'var(--yellow)', title: 'Razendsnel', desc: 'Geoptimaliseerde code die razendsnel laadt. Geen bezoekers kwijtraken door trage laadtijden.' },
+          { icon: '📱', kleur: 'var(--sky)', title: 'Mobielvriendelijk', desc: 'Meer dan 60% van het verkeer is mobiel. Jouw site ziet er op elk apparaat perfect uit.' },
+          { icon: '🎯', kleur: 'var(--teal)', title: 'Converterend', desc: 'Elke pagina heeft één doel: de bezoeker naar actie leiden. Contactformulier of aankoop.' },
+          { icon: '🔒', kleur: 'var(--yellow)', title: 'Veilig & stabiel', desc: 'SSL, regelmatige updates en backups. Jouw website is altijd bereikbaar en veilig.' },
+          { icon: '🛠️', kleur: 'var(--sky)', title: 'Zelf beheren', desc: 'Eenvoudig CMS zodat je teksten en foto\'s zelf kunt aanpassen — geen technische kennis nodig.' },
+        ].map(k => (
+          <div class="wk-card">
+            <div class="wk-icon" style={`background:${k.kleur};color:${k.kleur === 'var(--teal)' ? 'var(--white)' : 'var(--dark)'}`}>{k.icon}</div>
+            <h3>{k.title}</h3>
+            <p>{k.desc}</p>
+          </div>
+        ))}
       </div>
     </div>
   </section>
 
-  <section id="voorbeelden" class="proces-section">
-    <div class="container">
-      <div class="proces-inner">
-        <div class="proces-text">
-          <span class="tag">Het proces</span>
-          <h2>Van idee naar<br />online in 4 stappen</h2>
-          <div class="proces-stappen">
-            <div class="stap">
-              <div class="stap-num">1</div>
+  <section style="background:var(--teal-light);">
+    <div class="container proces-wrap">
+      <div class="proces-text">
+        <span class="tag">Het proces</span>
+        <h2>Van idee naar<br />online in 4 stappen</h2>
+        <div class="proces-stappen">
+          {[
+            { num:'1', kleur:'var(--teal)', title:'Intake & briefing', desc:'We bespreken wensen, doelgroep en doelen. Peter stelt een offerte op.' },
+            { num:'2', kleur:'var(--yellow)', title:'Ontwerp & feedback', desc:'Je krijgt een ontwerp te zien en geeft feedback. Pas wanneer je tevreden bent, gaan we bouwen.' },
+            { num:'3', kleur:'var(--sky)', title:'Bouw & testen', desc:'Gebouwd en uitgebreid getest op alle apparaten. Snel, veilig en bugvrij.' },
+            { num:'4', kleur:'var(--teal)', title:'Live & doorgroeien', desc:'Jouw website gaat live. Peter blijft beschikbaar voor updates en uitbreidingen.' },
+          ].map(s => (
+            <div class="ps-stap">
+              <div class="ps-num" style={`background:${s.kleur};color:${s.kleur === 'var(--yellow)' ? 'var(--dark)' : 'var(--white)'}`}>{s.num}</div>
               <div>
-                <h4>Intake & briefing</h4>
-                <p>We bespreken jouw wensen, doelgroep en doelen. Peter stelt een offerte op maat op.</p>
+                <h4>{s.title}</h4>
+                <p>{s.desc}</p>
               </div>
             </div>
-            <div class="stap">
-              <div class="stap-num">2</div>
-              <div>
-                <h4>Ontwerp & feedback</h4>
-                <p>Je krijgt een ontwerp te zien en kunt feedback geven. Pas wanneer jij tevreden bent, gaan we bouwen.</p>
-              </div>
-            </div>
-            <div class="stap">
-              <div class="stap-num">3</div>
-              <div>
-                <h4>Bouw & testen</h4>
-                <p>De website wordt gebouwd en uitgebreid getest op alle apparaten en browsers.</p>
-              </div>
-            </div>
-            <div class="stap">
-              <div class="stap-num">4</div>
-              <div>
-                <h4>Live & doorgroeien</h4>
-                <p>Jouw website gaat live. Peter blijft beschikbaar voor vragen, updates en uitbreidingen.</p>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
-        <div class="proces-visual">
-          <div class="browser-mock">
-            <div class="browser-bar">
-              <div class="browser-dots">
-                <span></span><span></span><span></span>
-              </div>
-              <div class="browser-url">belpeter.nl</div>
-            </div>
-            <div class="browser-content">
-              <div class="mock-hero">
-                <div class="mock-tag"></div>
-                <div class="mock-h1"></div>
-                <div class="mock-h1 short"></div>
-                <div class="mock-p"></div>
-                <div class="mock-p"></div>
-                <div class="mock-btn"></div>
-              </div>
+      </div>
+      <div class="browser-vis">
+        <div class="browser-chrome">
+          <div class="bc-bar">
+            <div class="bc-dots"><span></span><span></span><span></span></div>
+            <div class="bc-url">belpeter.nl</div>
+          </div>
+          <div class="bc-content">
+            <div style="height:8px;width:60px;background:var(--teal-light);border-radius:100px;margin-bottom:12px;"></div>
+            <div style="height:20px;width:90%;background:var(--dark);border-radius:6px;margin-bottom:8px;"></div>
+            <div style="height:20px;width:65%;background:var(--dark);border-radius:6px;opacity:0.6;margin-bottom:16px;"></div>
+            <div style="height:10px;width:100%;background:#eee;border-radius:4px;margin-bottom:6px;"></div>
+            <div style="height:10px;width:80%;background:#eee;border-radius:4px;margin-bottom:20px;"></div>
+            <div style="height:40px;width:140px;background:var(--yellow);border-radius:100px;"></div>
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:24px;">
+              <div style="height:80px;background:var(--teal-light);border-radius:var(--radius);"></div>
+              <div style="height:80px;background:rgba(255,240,1,0.15);border-radius:var(--radius);"></div>
+              <div style="height:80px;background:var(--sky-light);border-radius:var(--radius);"></div>
             </div>
           </div>
         </div>
@@ -121,52 +99,29 @@ import Layout from '../../layouts/Layout.astro';
     </div>
   </section>
 
-  <section class="pakketten-section">
+  <section style="background:var(--dark);padding:88px 0;">
     <div class="container">
-      <div class="section-header">
-        <span class="tag">Pakketten</span>
-        <h2>Kies jouw website</h2>
+      <div class="section-header" style="margin-bottom:48px;">
+        <span class="tag" style="background:rgba(21,186,179,0.2);color:var(--teal);">Pakketten</span>
+        <h2 style="color:var(--white);">Kies jouw website</h2>
       </div>
-      <div class="pakketten-grid">
-        <div class="pakket-card">
-          <h3>Starter</h3>
-          <div class="pakket-sub">1–5 pagina's</div>
-          <ul class="pakket-list">
-            <li>✓ Op maat ontwerp</li>
-            <li>✓ Mobielvriendelijk</li>
-            <li>✓ SEO-basis</li>
-            <li>✓ Contactformulier</li>
-            <li>✓ 1 maand support</li>
-          </ul>
-          <a href="/contact" class="btn btn-outline">Aanvragen</a>
-        </div>
-        <div class="pakket-card pakket-featured">
-          <div class="pakket-badge">Meest gekozen</div>
-          <h3>Business</h3>
-          <div class="pakket-sub">5–15 pagina's</div>
-          <ul class="pakket-list">
-            <li>✓ Uitgebreid ontwerp</li>
-            <li>✓ SEO-optimalisatie</li>
-            <li>✓ Google Analytics</li>
-            <li>✓ CMS voor eigen beheer</li>
-            <li>✓ Blog / nieuws module</li>
-            <li>✓ 3 maanden support</li>
-          </ul>
-          <a href="/contact" class="btn btn-primary">Aanvragen</a>
-        </div>
-        <div class="pakket-card">
-          <h3>E-commerce</h3>
-          <div class="pakket-sub">Webshop op maat</div>
-          <ul class="pakket-list">
-            <li>✓ Webshop & producten</li>
-            <li>✓ Betaalintegratie</li>
-            <li>✓ Voorraadbeheer</li>
-            <li>✓ Klantaccounts</li>
-            <li>✓ Uitgebreide SEO</li>
-            <li>✓ 6 maanden support</li>
-          </ul>
-          <a href="/contact" class="btn btn-outline">Aanvragen</a>
-        </div>
+      <div class="web-pakketten">
+        {[
+          { name:'Starter', sub:'1–5 pagina\'s', kleur:'var(--teal)', items:['Op maat ontwerp','Mobielvriendelijk','SEO-basis','Contactformulier','1 maand support'], featured:false },
+          { name:'Business', sub:'5–15 pagina\'s', kleur:'var(--yellow)', items:['Uitgebreid ontwerp','SEO-optimalisatie','Google Analytics','CMS voor eigen beheer','Blog/nieuws module','3 maanden support'], featured:true },
+          { name:'E-commerce', sub:'Webshop op maat', kleur:'var(--sky)', items:['Webshop & producten','Betaalintegratie','Voorraadbeheer','Klantaccounts','Uitgebreide SEO','6 maanden support'], featured:false },
+        ].map(p => (
+          <div class={`wp-card ${p.featured ? 'wp-featured' : ''}`} style={p.featured ? `border:2px solid ${p.kleur}` : 'border:2px solid rgba(255,255,255,0.08)'}>
+            {p.featured && <div class="wp-badge" style={`background:${p.kleur};color:${p.kleur === 'var(--yellow)' ? 'var(--dark)' : 'var(--white)'}`}>Meest gekozen</div>}
+            <div class="wp-accent" style={`background:${p.kleur};`}></div>
+            <h3 style="color:var(--white);">{p.name}</h3>
+            <p style="color:var(--teal);font-weight:600;font-size:0.88rem;margin-bottom:20px;">{p.sub}</p>
+            <ul class="wp-list">
+              {p.items.map(i => <li style="color:rgba(255,255,255,0.7);">✓ {i}</li>)}
+            </ul>
+            <a href="/contact" class="btn btn-outline-white" style="width:100%;justify-content:center;margin-top:auto;">Aanvragen</a>
+          </div>
+        ))}
       </div>
     </div>
   </section>
@@ -175,88 +130,60 @@ import Layout from '../../layouts/Layout.astro';
     <div class="container">
       <div class="cta-inner">
         <div class="cta-text">
-          <h2>Jouw website laten maken?</h2>
-          <p>Plan een gratis kennismaking en ontdek wat mogelijk is voor jouw budget en wensen.</p>
+          <h2>Jouw website laten<br />maken in Twente?</h2>
+          <p>Plan een gratis adviesgesprek en ontdek wat mogelijk is voor jouw bedrijf.</p>
         </div>
-        <a href="/contact" class="btn btn-primary">Gratis adviesgesprek</a>
+        <div class="cta-actions">
+          <a href="/contact" class="btn btn-primary">Gratis adviesgesprek</a>
+        </div>
       </div>
     </div>
   </section>
-
 </Layout>
 
 <style>
-.service-hero {
-  padding: 80px 0;
-  color: var(--white);
-  background: linear-gradient(135deg, var(--forest) 0%, #1a3a34 100%);
-}
+.web-kenmerken { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.wk-card { background: var(--gray-light); border-radius: var(--radius-lg); padding: 28px; transition: transform 0.2s; }
+.wk-card:hover { transform: translateY(-3px); }
+.wk-icon { width: 52px; height: 52px; border-radius: var(--radius); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 14px; }
+.wk-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+.wk-card p { font-size: 0.85rem; color: var(--gray-text); line-height: 1.65; }
 
-.service-hero .tag { background: rgba(21,186,179,0.2); color: var(--teal); margin-bottom: 20px; display: inline-block; }
-.service-hero h1 { font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 800; color: var(--white); margin-bottom: 20px; letter-spacing: -0.03em; }
-.accent { color: var(--yellow); }
-.service-hero p { color: rgba(255,255,255,0.75); max-width: 500px; font-size: 1.05rem; line-height: 1.7; margin-bottom: 32px; }
-.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
-
-.section-header { text-align: center; max-width: 600px; margin: 0 auto 56px; }
-.section-header h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 800; margin: 12px 0 0; letter-spacing: -0.03em; }
-
-.kenmerken-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-.kenmerk { padding: 28px; background: var(--gray-light); border-radius: var(--radius-lg); }
-.kenmerk-icon { font-size: 1.8rem; margin-bottom: 12px; }
-.kenmerk h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
-.kenmerk p { font-size: 0.85rem; color: var(--gray-text); line-height: 1.6; }
-
-.proces-section { background: var(--gray-light); }
-.proces-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-.proces-text .tag { margin-bottom: 12px; display: inline-block; }
-.proces-text h2 { font-size: clamp(1.8rem, 2.5vw, 2.4rem); font-weight: 800; margin-bottom: 28px; letter-spacing: -0.03em; }
+.proces-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.proces-text .tag { margin-bottom: 14px; }
+.proces-text h2 { font-size: clamp(1.8rem,3vw,2.4rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 28px; }
 .proces-stappen { display: flex; flex-direction: column; gap: 20px; }
-.stap { display: flex; gap: 16px; align-items: flex-start; }
-.stap-num { width: 32px; height: 32px; border-radius: 50%; background: var(--teal); color: var(--white); font-family: var(--font-display); font-weight: 700; font-size: 0.85rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.stap h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 4px; }
-.stap p { font-size: 0.84rem; color: var(--gray-text); line-height: 1.6; }
+.ps-stap { display: flex; gap: 16px; align-items: flex-start; }
+.ps-num { width: 36px; height: 36px; border-radius: 50%; font-family: var(--font-display); font-weight: 800; font-size: 0.9rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.ps-stap h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 4px; }
+.ps-stap p { font-size: 0.84rem; color: var(--gray-text); line-height: 1.6; }
 
-/* Browser mockup */
-.browser-mock { background: var(--white); border-radius: var(--radius-lg); box-shadow: 0 20px 60px rgba(0,0,0,0.12); overflow: hidden; }
-.browser-bar { background: #f0f0f0; padding: 12px 16px; display: flex; align-items: center; gap: 12px; }
-.browser-dots { display: flex; gap: 6px; }
-.browser-dots span { width: 10px; height: 10px; border-radius: 50%; background: #ddd; }
-.browser-dots span:first-child { background: #ff5f57; }
-.browser-dots span:nth-child(2) { background: #febc2e; }
-.browser-dots span:nth-child(3) { background: #28c840; }
-.browser-url { flex: 1; background: var(--white); border-radius: 6px; padding: 4px 12px; font-size: 0.78rem; color: var(--gray-text); }
-.browser-content { padding: 28px; }
-.mock-hero { display: flex; flex-direction: column; gap: 10px; }
-.mock-tag { width: 80px; height: 20px; background: rgba(21,186,179,0.15); border-radius: 100px; }
-.mock-h1 { width: 90%; height: 18px; background: var(--dark); border-radius: 4px; opacity: 0.8; }
-.mock-h1.short { width: 60%; }
-.mock-p { width: 100%; height: 10px; background: #ddd; border-radius: 4px; }
-.mock-btn { width: 120px; height: 36px; background: var(--yellow); border-radius: 6px; margin-top: 4px; }
+.browser-vis { display: flex; align-items: center; justify-content: center; }
+.browser-chrome { background: var(--white); border-radius: var(--radius-lg); box-shadow: 0 24px 64px rgba(0,0,0,0.12); overflow: hidden; width: 100%; max-width: 380px; }
+.bc-bar { background: #f0f0f0; padding: 10px 14px; display: flex; align-items: center; gap: 12px; }
+.bc-dots { display: flex; gap: 5px; }
+.bc-dots span { width: 10px; height: 10px; border-radius: 50%; background: #ddd; }
+.bc-dots span:nth-child(1) { background: #ff5f57; }
+.bc-dots span:nth-child(2) { background: #febc2e; }
+.bc-dots span:nth-child(3) { background: #28c840; }
+.bc-url { flex: 1; background: var(--white); border-radius: 6px; padding: 4px 12px; font-size: 0.75rem; color: var(--gray-text); }
+.bc-content { padding: 24px; }
 
-.pakketten-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.pakket-card { background: var(--white); border-radius: var(--radius-lg); padding: 32px; border: 1px solid var(--gray-mid); position: relative; }
-.pakket-featured { border-color: var(--teal); box-shadow: 0 8px 32px rgba(21,186,179,0.15); }
-.pakket-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--teal); color: var(--white); padding: 4px 16px; border-radius: 100px; font-size: 0.75rem; font-weight: 700; white-space: nowrap; }
-.pakket-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 4px; }
-.pakket-sub { font-size: 0.88rem; color: var(--teal); font-weight: 600; margin-bottom: 20px; }
-.pakket-list { list-style: none; margin-bottom: 24px; display: flex; flex-direction: column; gap: 10px; }
-.pakket-list li { font-size: 0.88rem; color: var(--dark); }
-
-.cta-banner { background: linear-gradient(135deg, var(--forest) 0%, var(--dark) 100%); padding: 64px 0; }
-.cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 40px; }
-.cta-text h2 { font-size: 1.8rem; font-weight: 800; color: var(--white); margin-bottom: 8px; letter-spacing: -0.03em; }
-.cta-text p { color: rgba(255,255,255,0.7); }
+.web-pakketten { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.wp-card { background: rgba(255,255,255,0.04); border-radius: var(--radius-lg); padding: 32px; position: relative; display: flex; flex-direction: column; }
+.wp-accent { width: 48px; height: 4px; border-radius: 2px; margin-bottom: 20px; }
+.wp-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); padding: 5px 16px; border-radius: 100px; font-size: 0.75rem; font-weight: 700; white-space: nowrap; }
+.wp-card h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 4px; }
+.wp-list { list-style: none; margin-bottom: 24px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.wp-list li { font-size: 0.88rem; }
 
 @media (max-width: 900px) {
-  .kenmerken-grid { grid-template-columns: 1fr 1fr; }
-  .proces-inner { grid-template-columns: 1fr; }
-  .proces-visual { display: none; }
-  .pakketten-grid { grid-template-columns: 1fr; }
-  .cta-inner { flex-direction: column; text-align: center; }
+  .web-kenmerken { grid-template-columns: 1fr 1fr; }
+  .proces-wrap { grid-template-columns: 1fr; }
+  .browser-vis { display: none; }
+  .web-pakketten { grid-template-columns: 1fr; }
 }
-
 @media (max-width: 600px) {
-  .kenmerken-grid { grid-template-columns: 1fr; }
+  .web-kenmerken { grid-template-columns: 1fr; }
 }
 </style>

@@ -2,21 +2,27 @@
 
 :root {
   --teal: #15bab3;
+  --teal-dark: #0e9a94;
+  --teal-light: #e0f7f6;
   --yellow: #fff001;
+  --yellow-dark: #e6d800;
+  --sky: #7dd3fc;
+  --sky-light: #e0f2fe;
   --forest: #294842;
   --dark: #141213;
+
   --white: #ffffff;
-  --gray-light: #f5f5f5;
+  --off-white: #fafffe;
+  --gray-light: #f4f4f4;
   --gray-mid: #e0e0e0;
   --gray-text: #6b6b6b;
 
   --font-display: 'Syne', sans-serif;
   --font-body: 'Inter', sans-serif;
 
-  --radius: 8px;
-  --radius-lg: 16px;
+  --radius: 10px;
+  --radius-lg: 20px;
   --max-width: 1200px;
-
   --nav-height: 72px;
 }
 
@@ -26,9 +32,7 @@
   padding: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   font-family: var(--font-body);
@@ -38,15 +42,8 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
 
 .container {
   max-width: var(--max-width);
@@ -59,71 +56,128 @@ h1, h2, h3, h4 {
   line-height: 1.15;
 }
 
+/* --- BUTTONS --- */
 .btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   padding: 14px 28px;
-  border-radius: var(--radius);
+  border-radius: 100px;
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 0.95rem;
   cursor: pointer;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s;
   border: none;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.18);
 }
 
 .btn-primary {
   background: var(--yellow);
   color: var(--dark);
 }
+.btn-primary:hover { background: var(--yellow-dark); }
 
-.btn-secondary {
-  background: transparent;
-  color: var(--white);
-  border: 2px solid rgba(255,255,255,0.4);
-}
-
-.btn-secondary:hover {
-  border-color: var(--white);
-  background: rgba(255,255,255,0.1);
-}
-
-.btn-outline {
-  background: transparent;
-  color: var(--teal);
-  border: 2px solid var(--teal);
-}
-
-.btn-outline:hover {
+.btn-teal {
   background: var(--teal);
   color: var(--white);
 }
+.btn-teal:hover { background: var(--teal-dark); box-shadow: 0 10px 28px rgba(21,186,179,0.35); }
 
+.btn-outline-white {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid rgba(255,255,255,0.5);
+}
+.btn-outline-white:hover { border-color: var(--white); background: rgba(255,255,255,0.12); }
+
+.btn-outline-dark {
+  background: transparent;
+  color: var(--dark);
+  border: 2px solid var(--dark);
+}
+.btn-outline-dark:hover { background: var(--dark); color: var(--white); }
+
+/* --- TAGS / BADGES --- */
 .tag {
   display: inline-block;
-  padding: 4px 12px;
-  background: rgba(21, 186, 179, 0.12);
-  color: var(--teal);
+  padding: 5px 14px;
+  background: var(--teal-light);
+  color: var(--teal-dark);
   border-radius: 100px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
-section {
+.tag-yellow {
+  background: rgba(255,240,1,0.25);
+  color: #7a6a00;
+}
+
+.tag-sky {
+  background: var(--sky-light);
+  color: #0369a1;
+}
+
+/* --- SECTION SPACING --- */
+section { padding: 88px 0; }
+
+/* --- SECTION HEADER --- */
+.section-header {
+  max-width: 640px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.section-header .tag { margin-bottom: 16px; }
+
+.section-header h2 {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+}
+
+.section-header p {
+  color: var(--gray-text);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+/* --- CTA BANNER (reusable) --- */
+.cta-banner {
+  background: var(--teal);
   padding: 80px 0;
 }
 
+.cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.cta-text h2 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 10px;
+  letter-spacing: -0.03em;
+}
+
+.cta-text p { color: rgba(255,255,255,0.85); font-size: 1.05rem; }
+.cta-actions { display: flex; gap: 12px; flex-shrink: 0; }
+
 @media (max-width: 768px) {
-  section {
-    padding: 56px 0;
-  }
+  section { padding: 60px 0; }
+  .cta-inner { flex-direction: column; text-align: center; }
+  .cta-actions { justify-content: center; }
 }
