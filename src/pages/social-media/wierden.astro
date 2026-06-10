@@ -1,0 +1,207 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const STAD = "Wierden";
+const SLUG = "wierden";
+const OMGEVING = "Nijverdal, Almelo en de Twente-regio";
+const UNIEK = "Wierden is een actieve ondernemersplaats middenin Twente. Van transport tot agrarische bedrijven en lokale detailhandel — Peter helpt elk type bedrijf in Wierden om beter gevonden te worden op social media.";
+const FAQ_EXTRA = "Wierden heeft veel lokale ondernemers die actief zijn in bouw, transport en agrarische sectoren.";
+---
+<Layout
+  title={`Social Media Beheer ${STAD} — Bel Peter | Meer Klanten in Twente`}
+  description={`Social media beheer in ${STAD} door Peter Rutgers. Lokale strategie voor ondernemers in ${STAD} en omgeving. Instagram, LinkedIn, Facebook. Gratis kennismaking.`}
+>
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Bel Peter",
+  "description": `Social media beheer en strategie voor ondernemers in ${STAD}, Twente`,
+  "url": `https://belpeter.nl/social-media/${SLUG}`,
+  "telephone": "+31851155136",
+  "email": "peter@belpeter.nl",
+  "areaServed": { "@type": "City", "name": STAD },
+  "address": { "@type": "PostalAddress", "addressLocality": "Nijverdal", "addressRegion": "Overijssel", "addressCountry": "NL" },
+  "priceRange": "€€",
+  "openingHours": ["Tu 09:00-17:00","We 09:00-17:00","Th 09:00-17:00","Fr 09:00-17:00"]
+})}></script>
+
+<section class="loc-hero">
+  <div class="container">
+    <nav class="breadcrumb">
+      <a href="/">Home</a> <span>›</span>
+      <a href="/diensten/social-media">Social Media</a> <span>›</span>
+      <span>{STAD}</span>
+    </nav>
+    <div class="loc-hero-inner">
+      <div class="loc-hero-text">
+        <span class="tag">Social Media Beheer · {STAD}</span>
+        <h1>SOCIAL MEDIA BEHEER<br />IN <span class="h-yellow">{STAD}</span></h1>
+        <p class="loc-intro">Ben je ondernemer in <strong>{STAD}</strong> en wil je meer klanten bereiken via Instagram, LinkedIn of Facebook? Peter Rutgers is jouw lokale zichtbaarheidspartner in Twente. {UNIEK}</p>
+        <div class="loc-btns">
+          <a href="/contact" class="btn btn-primary">Gratis kennismaking in {STAD}</a>
+          <a href="/diensten/social-media" class="btn btn-outline-dark">Bekijk pakketten</a>
+        </div>
+        <p class="loc-bereik">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Ook actief in {OMGEVING}
+        </p>
+      </div>
+      <div class="loc-hero-card">
+        <div class="lhc-platform"><div class="lhc-icon" style="background:rgba(255,240,1,0.15);">📱</div><div><strong>Instagram</strong><span>Reels, Stories & Posts</span></div></div>
+        <div class="lhc-platform"><div class="lhc-icon" style="background:var(--teal-light);">💼</div><div><strong>LinkedIn</strong><span>Zakelijk netwerken</span></div></div>
+        <div class="lhc-platform"><div class="lhc-icon" style="background:var(--sky-light);">👥</div><div><strong>Facebook</strong><span>Lokaal bereik in {STAD}</span></div></div>
+        <div style="border-top:1px solid var(--gray-mid);padding-top:16px;margin-top:4px;">
+          <div style="font-size:0.78rem;color:var(--gray-text);margin-bottom:4px;text-transform:uppercase;letter-spacing:0.06em;font-weight:700;">Werkgebied</div>
+          <div style="font-size:0.85rem;font-weight:600;">{STAD} & omgeving</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--yellow);padding:80px 0;">
+  <div class="container">
+    <div class="section-header">
+      <span class="tag" style="background:rgba(20,18,19,0.1);color:var(--dark);">Waarom Bel Peter in {STAD}?</span>
+      <h2 style="color:var(--dark);">LOKALE KENNIS,<br />PROFESSIONEEL RESULTAAT</h2>
+      <p style="color:rgba(20,18,19,0.65);">Peter kent Twente. Als Twentenaar uit Nijverdal weet hij wat werkt voor bedrijven in {STAD} en hoe je de lokale doelgroep bereikt op social media.</p>
+    </div>
+    <div class="loc-voordelen">
+      <div class="lv-item"><div class="lv-icon" style="background:var(--dark);color:var(--yellow);">🎯</div><h3>Lokale strategie</h3><p>Content die aansluit bij de markt in {STAD} en jouw lokale klanten aanspreekt.</p></div>
+      <div class="lv-item"><div class="lv-icon" style="background:var(--teal);color:var(--white);">📍</div><h3>Persoonlijk contact</h3><p>Peter is snel bereikbaar en kent de regio. Geen callcenter, gewoon Peter.</p></div>
+      <div class="lv-item"><div class="lv-icon" style="background:var(--sky);color:var(--dark);">📈</div><h3>Meetbaar resultaat</h3><p>Maandelijkse rapportage over bereik, engagement en groei in de regio.</p></div>
+      <div class="lv-item"><div class="lv-icon" style="background:var(--dark);color:var(--white);">⚡</div><h3>Snel opstarten</h3><p>Binnen een week live. Peter regelt strategie, visuals, teksten en planning.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="loc-split">
+      <div class="loc-split-text">
+        <span class="tag">Wat Peter doet voor jouw bedrijf in {STAD}</span>
+        <h2>COMPLEET ONTZORGD<br />OP SOCIAL MEDIA</h2>
+        <p>Je hoeft zelf niets te weten van algorithms of contentkalenders. Peter neemt het volledig uit handen zodat jij je kunt richten op je vak.</p>
+        <div class="loc-dienst-items">
+          <div class="ldi"><span class="ldi-nr" style="background:var(--yellow);">1</span><div><strong>Strategie & audit</strong><p>Analyse van jouw huidige aanwezigheid en een concreet plan voor groei in {STAD}.</p></div></div>
+          <div class="ldi"><span class="ldi-nr" style="background:var(--sky);">2</span><div><strong>Content op maat</strong><p>Teksten, visuals en Reels die passen bij jouw merk en aanspreken in de lokale markt.</p></div></div>
+          <div class="ldi"><span class="ldi-nr" style="background:var(--teal);color:var(--white);">3</span><div><strong>Publiceren & reageren</strong><p>Alles wordt gepland en gepubliceerd. Reacties en berichten worden bijgehouden.</p></div></div>
+          <div class="ldi"><span class="ldi-nr" style="background:var(--dark);color:var(--white);">4</span><div><strong>Rapportage</strong><p>Iedere maand een helder overzicht: wat werkte, wat groeide, wat de volgende stap is.</p></div></div>
+        </div>
+        <a href="/contact" class="btn btn-primary">Plan een kennismaking</a>
+      </div>
+      <div class="loc-split-prijzen">
+        <h3 style="margin-bottom:20px;">Pakketten voor {STAD}</h3>
+        <div class="lsp-card"><div class="lsp-header"><span>Starter</span><strong>€ 199<small>/maand excl. btw</small></strong></div><p>5 posts · 1 platform · Contentplan & visuals</p></div>
+        <div class="lsp-card lsp-featured"><div class="lsp-badge">Populair in {STAD}</div><div class="lsp-header"><span>Groei</span><strong>€ 349<small>/maand excl. btw</small></strong></div><p>16 posts · 2 platformen · Reels · Community management · Rapportage</p></div>
+        <div class="lsp-card" style="background:var(--gray-light);border:2px dashed var(--gray-mid);"><div class="lsp-header"><span>Compleet</span><strong>Op aanvraag</strong></div><p>Alle platformen · Advertenties · Volledige ontzorging</p></div>
+        <a href="/contact" class="btn btn-dark" style="width:100%;justify-content:center;margin-top:16px;">Vraag offerte aan voor {STAD}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--gray-light);">
+  <div class="container">
+    <div class="section-header">
+      <span class="tag">Veelgestelde vragen</span>
+      <h2>VRAGEN OVER SOCIAL MEDIA<br />IN {STAD}</h2>
+    </div>
+    <div class="faq-lijst">
+      <div class="faq-item"><h3>Wat kost social media beheer in {STAD}?</h3><p>De Starter begint vanaf €199 per maand excl. btw voor 5 posts op 1 platform. Het Groei-pakket kost €349 per maand voor 16 posts op 2 platformen inclusief community management en rapportage.</p></div>
+      <div class="faq-item"><h3>Werkt Peter ook voor kleine bedrijven in {STAD}?</h3><p>Absoluut. Peter werkt juist veel voor zzp'ers en mkb-bedrijven die online zichtbaarder willen worden maar er zelf geen tijd voor hebben. {FAQ_EXTRA}</p></div>
+      <div class="faq-item"><h3>Hoe snel kan Peter starten in {STAD}?</h3><p>Na de gratis kennismaking en akkoord op het plan is Peter meestal binnen een week operationeel. De eerste content gaat live zodra de strategie staat.</p></div>
+      <div class="faq-item"><h3>Kan ik stoppen wanneer ik wil?</h3><p>Ja. Peter werkt met een opzegtermijn van één maand. Geen jaarcontracten of verborgen kosten. Flexibiliteit staat voorop.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--dark);padding:48px 0;">
+  <div class="container">
+    <div class="intern-links">
+      <p style="color:rgba(255,255,255,0.5);font-size:0.82rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:16px;">Ook actief in</p>
+      <div class="il-steden">
+        <a href="/social-media/nijverdal" class="il-stad">Nijverdal</a>
+        <a href="/social-media/hellendoorn" class="il-stad">Hellendoorn</a>
+        <a href="/social-media/wierden" class="il-stad il-active">Wierden</a>
+        <a href="/social-media/almelo" class="il-stad">Almelo</a>
+        <a href="/social-media/hengelo" class="il-stad">Hengelo</a>
+        <a href="/social-media/enschede" class="il-stad">Enschede</a>
+        <a href="/social-media/rijssen" class="il-stad">Rijssen</a>
+      </div>
+      <div style="display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;">
+        <a href="/diensten/social-media" class="btn btn-outline-white" style="font-size:0.82rem;padding:10px 18px;">Alle social media pakketten</a>
+        <a href="/diensten/websites" class="btn btn-outline-white" style="font-size:0.82rem;padding:10px 18px;">Website laten maken?</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container">
+    <div class="cta-inner">
+      <div class="cta-text">
+        <h2>KLAAR OM OP TE VALLEN<br /><span style="color:var(--yellow);">IN {STAD}?</span></h2>
+        <p>Plan een gratis kennismaking. Peter reageert binnen 24 uur.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary">Gratis kennismaking aanvragen</a>
+        <a href="tel:+31851155136" class="btn btn-outline-white">085 115 5136</a>
+      </div>
+    </div>
+  </div>
+</section>
+</Layout>
+
+<style>
+.loc-hero { background:var(--white);padding:48px 0 72px;border-bottom:3px solid var(--yellow); }
+.breadcrumb { display:flex;align-items:center;gap:8px;font-size:0.78rem;color:var(--gray-text);margin-bottom:32px; }
+.breadcrumb a { color:var(--teal);font-weight:600; }
+.breadcrumb span { color:var(--gray-mid); }
+.loc-hero-inner { display:grid;grid-template-columns:1fr 320px;gap:56px;align-items:start; }
+.loc-hero-text .tag { margin-bottom:16px; }
+.loc-hero-text h1 { font-size:clamp(2.2rem,4.5vw,3.4rem);margin-bottom:18px; }
+.h-yellow { color:var(--yellow);-webkit-text-stroke:1px rgba(20,18,19,0.15); }
+.loc-intro { font-size:1rem;color:var(--gray-text);line-height:1.75;margin-bottom:24px;font-weight:400;max-width:520px; }
+.loc-intro strong { color:var(--dark);font-weight:700; }
+.loc-btns { display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px; }
+.loc-bereik { display:flex;align-items:center;gap:7px;font-size:0.78rem;color:var(--gray-text); }
+.loc-bereik svg { color:var(--teal); }
+.loc-hero-card { background:var(--white);border:2px solid var(--yellow);border-radius:var(--radius-lg);padding:24px;box-shadow:0 8px 32px rgba(0,0,0,0.06);display:flex;flex-direction:column;gap:16px; }
+.lhc-platform { display:flex;align-items:center;gap:14px; }
+.lhc-icon { width:40px;height:40px;border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0; }
+.lhc-platform strong { display:block;font-size:0.88rem;font-weight:700; }
+.lhc-platform span { font-size:0.75rem;color:var(--gray-text);font-weight:400; }
+.loc-voordelen { display:grid;grid-template-columns:repeat(4,1fr);gap:20px; }
+.lv-item { background:var(--white);border-radius:var(--radius-lg);padding:24px; }
+.lv-icon { width:48px;height:48px;border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:12px; }
+.lv-item h3 { font-size:0.95rem;font-weight:700;margin-bottom:6px;text-transform:none; }
+.lv-item p { font-size:0.82rem;color:var(--gray-text);line-height:1.6;font-weight:400; }
+.loc-split { display:grid;grid-template-columns:1.2fr 1fr;gap:60px;align-items:start; }
+.loc-split-text .tag { margin-bottom:14px; }
+.loc-split-text h2 { margin-bottom:14px; }
+.loc-split-text > p { color:var(--gray-text);line-height:1.7;margin-bottom:24px;font-size:0.95rem;font-weight:400; }
+.loc-dienst-items { display:flex;flex-direction:column;gap:18px;margin-bottom:28px; }
+.ldi { display:flex;gap:14px;align-items:flex-start; }
+.ldi-nr { width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:0.8rem;flex-shrink:0; }
+.ldi strong { display:block;font-size:0.88rem;font-weight:700;margin-bottom:3px; }
+.ldi p { font-size:0.8rem;color:var(--gray-text);line-height:1.5;font-weight:400;margin:0; }
+.loc-split-prijzen h3 { font-size:1rem;font-weight:700;text-transform:none; }
+.lsp-card { background:var(--white);border:2px solid var(--gray-mid);border-radius:var(--radius-lg);padding:18px 20px;margin-bottom:12px;position:relative; }
+.lsp-featured { border-color:var(--yellow);background:rgba(255,240,1,0.04); }
+.lsp-badge { position:absolute;top:-10px;left:16px;background:var(--yellow);color:var(--dark);font-size:0.7rem;font-weight:700;padding:3px 12px;border-radius:100px; }
+.lsp-header { display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px; }
+.lsp-header span { font-weight:700;font-size:0.9rem; }
+.lsp-header strong { font-size:1.1rem;font-weight:800; }
+.lsp-header small { font-size:0.65rem;font-weight:400;color:var(--gray-text);margin-left:2px; }
+.lsp-card > p { font-size:0.78rem;color:var(--gray-text);font-weight:400; }
+.faq-lijst { display:grid;grid-template-columns:1fr 1fr;gap:20px; }
+.faq-item { background:var(--white);border-radius:var(--radius-lg);padding:24px;border-left:4px solid var(--yellow); }
+.faq-item h3 { font-size:0.92rem;font-weight:700;margin-bottom:8px;text-transform:none;line-height:1.4; }
+.faq-item p { font-size:0.84rem;color:var(--gray-text);line-height:1.65;font-weight:400; }
+.il-steden { display:flex;gap:10px;flex-wrap:wrap; }
+.il-stad { background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);padding:6px 16px;border-radius:100px;font-size:0.82rem;font-weight:600;transition:background 0.15s,color 0.15s; }
+.il-stad:hover,.il-active { background:var(--yellow);color:var(--dark);border-color:var(--yellow); }
+@media (max-width:900px) { .loc-hero-inner { grid-template-columns:1fr; } .loc-hero-card { display:none; } .loc-voordelen { grid-template-columns:1fr 1fr; } .loc-split { grid-template-columns:1fr; } .faq-lijst { grid-template-columns:1fr; } }
+@media (max-width:600px) { .loc-voordelen { grid-template-columns:1fr; } }
+</style>
