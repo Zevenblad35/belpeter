@@ -4,138 +4,324 @@ import Layout from '../../layouts/Layout.astro';
 <Layout
   title="Social Media Beheer Twente — Meer Zichtbaarheid Online | Bel Peter"
   description="Social media strategie en beheer door Peter Rutgers in Twente. Instagram, LinkedIn en Facebook voor ondernemers in Nijverdal, Almelo, Hengelo en omgeving."
+  canonical="https://belpeter.nl/diensten/social-media/"
 >
-  <section class="svc-hero" style="background:linear-gradient(135deg, var(--teal) 0%, var(--forest) 100%);">
-    <div class="container svc-hero-inner" style="padding:88px 0 64px;">
-      <span class="tag" style="background:rgba(255,255,255,0.2);color:var(--white);">Dienst 02 — Social Media</span>
-      <h1 style="font-size:clamp(2rem,4.5vw,3.5rem);font-weight:800;color:var(--white);letter-spacing:-0.03em;margin:16px 0 16px;">Van volgers naar<br /><span style="color:var(--yellow)">echte klanten</span></h1>
-      <p style="color:rgba(255,255,255,0.8);max-width:520px;font-size:1.05rem;line-height:1.7;margin-bottom:28px;">Een consistente aanwezigheid op social media bouwt vertrouwen. Peter neemt het uit handen — van strategie tot dagelijks beheer.</p>
-      <div style="display:flex;gap:14px;flex-wrap:wrap;">
-        <a href="/contact" class="btn btn-primary">Start vandaag</a>
-        <a href="#aanpak" class="btn btn-outline-white">Bekijk aanpak</a>
+
+<!-- ─── HERO ───────────────────────────────── -->
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Dienst 01 — Social Media</span>
+    <h1>Van volgers naar<br>echte klanten</h1>
+    <p>Een consistente aanwezigheid op social media bouwt vertrouwen. Peter neemt het uit handen — van strategie tot dagelijks beheer.</p>
+    <div class="hero-ctas">
+      <a href="/contact" class="btn btn-primary">Start vandaag</a>
+      <a href="#aanpak" class="btn btn-outline">Bekijk aanpak</a>
+    </div>
+    <div class="platform-row">
+      <div class="platform-pill">
+        <span>📱</span>
+        <div><strong>Instagram</strong><small>Actief beheerd</small></div>
+      </div>
+      <div class="platform-pill">
+        <span>💼</span>
+        <div><strong>LinkedIn</strong><small>Actief beheerd</small></div>
+      </div>
+      <div class="platform-pill">
+        <span>👥</span>
+        <div><strong>Facebook</strong><small>Actief beheerd</small></div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section style="background:var(--yellow);padding:20px 0;">
-    <div class="container" style="display:flex;justify-content:center;gap:48px;flex-wrap:wrap;">
-      {['Instagram','LinkedIn','Facebook'].map(p => (
-        <div style="text-align:center;">
-          <div style="font-family:var(--font-display);font-weight:800;font-size:1.1rem;color:var(--dark);">{p}</div>
-          <div style="font-size:0.78rem;color:rgba(20,18,19,0.6);">Actief beheerd</div>
-        </div>
-      ))}
+<!-- ─── AANPAK ─────────────────────────────── -->
+<section id="aanpak" class="section bg-white">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Aanpak</span>
+      <h2>Hoe Peter jouw social media<br>laat groeien in Twente</h2>
+      <p>Geen standaard templates. Een aanpak die past bij jouw bedrijf en jouw publiek in Twente en omgeving.</p>
     </div>
-  </section>
-
-  <section id="aanpak">
-    <div class="container">
-      <div class="section-header">
-        <span class="tag">Aanpak</span>
-        <h2>Hoe Peter jouw social media<br />laat groeien in Twente</h2>
-        <p>Geen standaard templates. Een aanpak die past bij jouw bedrijf en jouw publiek in Twente en omgeving.</p>
+    <div class="aanpak-grid">
+      <div class="aanpak-card">
+        <div class="aanpak-num">01</div>
+        <div class="aanpak-icon" aria-hidden="true">🔍</div>
+        <h4>Strategie & audit</h4>
+        <p>Analyse van jouw huidige situatie, doelgroep en concurrenten. Daarna een concreet plan.</p>
       </div>
-      <div class="aanpak-stappen">
-        {[
-          { kleur: 'var(--teal)', icon: '🔍', num: '01', title: 'Strategie & audit', desc: 'Analyse van jouw huidige situatie, doelgroep en concurrenten. Daarna een concreet plan.' },
-          { kleur: 'var(--yellow)', icon: '✍️', num: '02', title: 'Contentcreatie', desc: 'Peter maakt content die bij jouw merk past: teksten, visuals en video\'s die engageren.' },
-          { kleur: 'var(--sky)', icon: '📤', num: '03', title: 'Publiceren & beheren', desc: 'Alle content op het juiste moment gepubliceerd. Reacties opgepakt, community gebouwd.' },
-          { kleur: 'var(--teal)', icon: '📊', num: '04', title: 'Meten & bijsturen', desc: 'Maandelijkse rapportage over bereik, engagement en groei. Continu optimaliseren.' },
-        ].map(s => (
-          <div class="aanpak-stap">
-            <div class="as-num" style={`background:${s.kleur};color:${s.kleur === 'var(--yellow)' ? 'var(--dark)' : 'var(--white)'}`}>{s.num}</div>
-            <div class="as-icon">{s.icon}</div>
-            <h3>{s.title}</h3>
-            <p>{s.desc}</p>
-          </div>
-        ))}
+      <div class="aanpak-card">
+        <div class="aanpak-num">02</div>
+        <div class="aanpak-icon" aria-hidden="true">✍️</div>
+        <h4>Contentcreatie</h4>
+        <p>Peter maakt content die bij jouw merk past: teksten, visuals en video's die engageren.</p>
+      </div>
+      <div class="aanpak-card">
+        <div class="aanpak-num">03</div>
+        <div class="aanpak-icon" aria-hidden="true">📤</div>
+        <h4>Publiceren & beheren</h4>
+        <p>Alle content op het juiste moment gepubliceerd. Reacties opgepakt, community gebouwd.</p>
+      </div>
+      <div class="aanpak-card">
+        <div class="aanpak-num">04</div>
+        <div class="aanpak-icon" aria-hidden="true">📊</div>
+        <h4>Meten & bijsturen</h4>
+        <p>Maandelijkse rapportage over bereik, engagement en groei. Continu optimaliseren.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section style="background:var(--teal-light);">
-    <div class="container">
-      <div class="section-header">
-        <span class="tag">Pakketten</span>
-        <h2>Kies wat past<br />bij jouw bedrijf</h2>
-      </div>
-      <div class="sm-pakket-grid">
-        <div class="sm-pakket">
+<!-- ─── PAKKETTEN ──────────────────────────── -->
+<section class="section bg-gray">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Pakketten</span>
+      <h2>Kies wat past<br>bij jouw bedrijf</h2>
+    </div>
+    <div class="pricing-grid">
+
+      <!-- Starter -->
+      <div class="pricing-card">
+        <div class="pricing-header">
           <h3>Starter</h3>
-          <p class="sm-freq">5 posts per maand</p>
-          <div class="sm-prijs">€ 199<small>/ maand excl. btw</small></div>
-          <ul class="sm-list">
-            <li>✓ 1 platform</li>
-            <li>✓ Contentplan</li>
-            <li>✓ Tekst & visuals</li>
-            <li>✓ Publicatie & planning</li>
-          </ul>
-          <a href="/contact" class="btn btn-outline-dark" style="width:100%;justify-content:center;">Meer info</a>
+          <p class="pricing-sub">5 posts per maand</p>
+          <div class="pricing-price"><strong>€ 199</strong><span>/ maand excl. btw</span></div>
         </div>
-        <div class="sm-pakket sm-featured">
-          <div class="sm-badge">Populair</div>
-          <h3>Groei</h3>
-          <p class="sm-freq">16 posts per maand</p>
-          <div class="sm-prijs" style="color:var(--yellow);">€ 349<small style="color:rgba(255,255,255,0.6);">/ maand excl. btw</small></div>
-          <ul class="sm-list">
-            <li>✓ 2 platformen</li>
-            <li>✓ Strategie & contentplan</li>
-            <li>✓ Tekst, visuals & Reels</li>
-            <li>✓ Community management</li>
-            <li>✓ Maandelijkse rapportage</li>
-          </ul>
-          <a href="/contact" class="btn btn-primary" style="width:100%;justify-content:center;">Meer info</a>
-        </div>
-        <div class="sm-pakket sm-custom">
-          <div style="font-size:2.5rem;margin-bottom:12px;text-align:center;">💬</div>
-          <h3 style="text-align:center;">Compleet pakket</h3>
-          <p class="sm-freq" style="text-align:center;">Op aanvraag</p>
-          <div class="sm-prijs" style="text-align:center;">Op maat</div>
-          <p style="font-size:0.84rem;color:var(--gray-text);line-height:1.6;margin-bottom:20px;text-align:center;">Alle platformen, advertentie-beheer en volledige ontzorging.</p>
-          <a href="/contact" class="btn btn-outline-dark" style="width:100%;justify-content:center;">Vraag offerte aan</a>
-        </div>
+        <ul class="check-list pricing-list">
+          <li>1 platform</li>
+          <li>Contentplan</li>
+          <li>Tekst & visuals</li>
+          <li>Publicatie & planning</li>
+        </ul>
+        <a href="/contact" class="btn btn-outline" style="width:100%;justify-content:center">Meer info</a>
       </div>
-    </div>
-  </section>
 
-  <section class="cta-banner">
-    <div class="container">
-      <div class="cta-inner">
-        <div class="cta-text">
-          <h2>Online zichtbaar worden<br />in Twente?</h2>
-          <p>Plan een gratis strategiegesprek en ontdek wat social media voor jouw bedrijf kan doen.</p>
+      <!-- Groei (popular) -->
+      <div class="pricing-card pricing-card--popular">
+        <div class="popular-badge">Populair</div>
+        <div class="pricing-header">
+          <h3>Groei</h3>
+          <p class="pricing-sub">16 posts per maand</p>
+          <div class="pricing-price"><strong>€ 349</strong><span>/ maand excl. btw</span></div>
         </div>
-        <div class="cta-actions">
-          <a href="/contact" class="btn btn-primary">Gratis gesprek inplannen</a>
+        <ul class="check-list pricing-list">
+          <li>2 platformen</li>
+          <li>Strategie & contentplan</li>
+          <li>Tekst, visuals & Reels</li>
+          <li>Community management</li>
+          <li>Maandelijkse rapportage</li>
+        </ul>
+        <a href="/contact" class="btn btn-primary" style="width:100%;justify-content:center">Meer info</a>
+      </div>
+
+      <!-- Compleet -->
+      <div class="pricing-card pricing-card--dark">
+        <div class="pricing-header">
+          <h3>Compleet pakket</h3>
+          <p class="pricing-sub">Op aanvraag</p>
+          <div class="pricing-price"><strong>Op maat</strong></div>
         </div>
+        <p style="font-size:14px;color:rgba(255,255,255,.7);margin-bottom:20px">Alle platformen, advertentie-beheer en volledige ontzorging.</p>
+        <ul class="check-list pricing-list pricing-list--light">
+          <li>Alle platformen</li>
+          <li>Advertentiebeheer</li>
+          <li>Volledige ontzorging</li>
+          <li>Persoonlijk accountmanager</li>
+        </ul>
+        <a href="/contact" class="btn btn-outline-light" style="width:100%;justify-content:center">Vraag offerte aan</a>
+      </div>
+
+    </div>
+    <p class="pricing-note">Alle prijzen zijn excl. BTW. Altijd maand-op-maand opzegbaar.</p>
+  </div>
+</section>
+
+<!-- ─── RESULTATEN ─────────────────────────── -->
+<section class="section bg-white">
+  <div class="container">
+    <div class="section-header">
+      <h2>Wat levert het op?</h2>
+    </div>
+    <div class="results-grid">
+      <div class="result-card">
+        <div class="result-icon" aria-hidden="true">👁️</div>
+        <h4>Meer bereik</h4>
+        <p>Consistente content vergroot jouw organisch bereik bij potentiële klanten in Twente en omgeving.</p>
+      </div>
+      <div class="result-card">
+        <div class="result-icon" aria-hidden="true">💬</div>
+        <h4>Meer engagement</h4>
+        <p>Content die aansluit bij jouw doelgroep zorgt voor reacties, shares en gesprekken over jouw merk.</p>
+      </div>
+      <div class="result-card">
+        <div class="result-icon" aria-hidden="true">🎯</div>
+        <h4>Meer klanten</h4>
+        <p>Zichtbaarheid op social media leidt tot aanvragen. Peter focust op content die converteert.</p>
+      </div>
+      <div class="result-card">
+        <div class="result-icon" aria-hidden="true">⏰</div>
+        <h4>Meer tijd</h4>
+        <p>Jij hoeft niet meer na te denken over wat je morgen post. Peter regelt het — elke dag.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- ─── FAQ ────────────────────────────────── -->
+<section class="section bg-gray">
+  <div class="container">
+    <div class="faq-layout">
+      <div>
+        <span class="eyebrow">Veelgestelde vragen</span>
+        <h2>Alles over<br>social media beheer</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Moet ik zelf content aanleveren?</summary>
+          <p>Nee. Peter maakt zelf de content — teksten, visuals en video. Jij hoeft alleen beschikbaar te zijn voor een maandelijks gesprek over de richting.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Hoelang duurt het voor ik resultaat zie?</summary>
+          <p>Social media werkt op de lange termijn. Na 3 maanden consistent posten zie je doorgaans duidelijke groei in bereik en engagement.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Kan ik tussentijds opzeggen?</summary>
+          <p>Ja. Alle pakketten zijn maand-op-maand opzegbaar. Geen jaarcontracten.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Welke platforms doet Peter?</summary>
+          <p>Instagram, LinkedIn en Facebook. In overleg is ook TikTok of YouTube Shorts mogelijk.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Kan ik ook advertenties laten beheren?</summary>
+          <p>Ja, dat valt onder het Compleet pakket. Vraag een offerte aan via het contactformulier.</p>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
 </Layout>
 
 <style>
-.aanpak-stappen { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
-.aanpak-stap { background: var(--gray-light); border-radius: var(--radius-lg); padding: 28px; text-align: center; }
-.as-num { width: 44px; height: 44px; border-radius: 50%; font-family: var(--font-display); font-weight: 800; font-size: 1rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; }
-.as-icon { font-size: 2rem; margin-bottom: 12px; }
-.aanpak-stap h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
-.aanpak-stap p { font-size: 0.84rem; color: var(--gray-text); line-height: 1.6; }
-.sm-pakket-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.sm-prijs { font-family: var(--font); font-weight: 800; font-size: 1.5rem; color: var(--dark); margin-bottom: 16px; }
-.sm-prijs small { font-size: 0.7rem; font-weight: 500; color: var(--gray-text); margin-left: 3px; }
-.sm-custom { background: var(--gray-light); border: 2px dashed var(--gray-mid) !important; }
-.sm-pakket { background: var(--white); border-radius: var(--radius-lg); padding: 32px; border: 2px solid transparent; position: relative; }
-.sm-featured { border-color: var(--teal); box-shadow: 0 8px 32px rgba(21,186,179,0.15); }
-.sm-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--teal); color: var(--white); padding: 5px 16px; border-radius: 100px; font-size: 0.75rem; font-weight: 700; white-space: nowrap; }
-.sm-pakket h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 4px; }
-.sm-freq { font-size: 0.88rem; color: var(--teal); font-weight: 600; margin-bottom: 20px; }
-.sm-list { list-style: none; margin-bottom: 24px; display: flex; flex-direction: column; gap: 10px; }
-.sm-list li { font-size: 0.88rem; }
-@media (max-width: 900px) {
-  .aanpak-stappen { grid-template-columns: 1fr 1fr; }
-  .sm-pakket-grid { grid-template-columns: 1fr; }
+.page-hero {
+  background: var(--yellow); padding: 80px 0 72px; text-align: center;
 }
-@media (max-width: 600px) {
-  .aanpak-stappen { grid-template-columns: 1fr; }
+.page-hero h1 { margin: 10px 0 16px; max-width: 700px; margin-left: auto; margin-right: auto; }
+.page-hero p  { font-size: 18px; max-width: 560px; margin: 0 auto 28px; }
+.hero-ctas    { display: flex; gap: 12px; justify-content: center; margin-bottom: 36px; flex-wrap: wrap; }
+
+.platform-row {
+  display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;
+}
+.platform-pill {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--white); border-radius: var(--radius-pill);
+  padding: 10px 20px; box-shadow: var(--shadow-sm);
+}
+.platform-pill span { font-size: 22px; }
+.platform-pill strong { display: block; font-size: 14px; color: var(--black); }
+.platform-pill small  { font-size: 12px; color: var(--gray-500); }
+
+/* AANPAK */
+.aanpak-grid {
+  display: grid; grid-template-columns: repeat(4,1fr);
+  gap: 20px;
+}
+.aanpak-card {
+  background: var(--gray-50); border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md); padding: 28px 22px;
+  position: relative;
+}
+.aanpak-num {
+  position: absolute; top: 16px; right: 16px;
+  font-size: 36px; font-weight: 900; color: rgba(0,0,0,.06); line-height: 1;
+}
+.aanpak-icon { font-size: 32px; margin-bottom: 12px; display: block; }
+.aanpak-card h4 { margin-bottom: 8px; }
+
+/* PRICING */
+.pricing-grid {
+  display: grid; grid-template-columns: repeat(3,1fr);
+  gap: 20px; align-items: start;
+}
+.pricing-card {
+  background: var(--white); border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg); padding: 32px 28px;
+  box-shadow: var(--shadow-sm); position: relative;
+}
+.pricing-card--popular {
+  border: 2px solid var(--blue); transform: scale(1.02);
+  box-shadow: var(--shadow-md);
+}
+.pricing-card--dark {
+  background: var(--black); border-color: transparent;
+}
+.pricing-card--dark h3,
+.pricing-card--dark strong { color: var(--white); }
+.popular-badge {
+  position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+  background: var(--blue); color: var(--white);
+  font-size: 12px; font-weight: 700; padding: 4px 16px; border-radius: var(--radius-pill);
+  white-space: nowrap;
+}
+.pricing-header { margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--gray-200); }
+.pricing-card--dark .pricing-header { border-color: rgba(255,255,255,.12); }
+.pricing-header h3 { font-size: 22px; margin-bottom: 4px; }
+.pricing-sub { font-size: 13px; color: var(--gray-500); margin-bottom: 12px; }
+.pricing-card--dark .pricing-sub { color: rgba(255,255,255,.5); }
+.pricing-price { display: flex; align-items: baseline; gap: 6px; }
+.pricing-price strong { font-size: 32px; font-weight: 900; color: var(--black); }
+.pricing-price span { font-size: 13px; color: var(--gray-500); }
+.pricing-list { margin-bottom: 24px; }
+.pricing-list--light li { color: rgba(255,255,255,.85); }
+.pricing-list--light li::before { background: rgba(255,255,255,.3) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") no-repeat center / 12px; }
+
+.btn-outline-light {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 13px 28px; border-radius: var(--radius-pill);
+  font-size: 15px; font-weight: 700; cursor: pointer;
+  background: transparent; color: var(--white);
+  border: 2px solid rgba(255,255,255,.4);
+  transition: border-color .15s; white-space: nowrap;
+}
+.btn-outline-light:hover { border-color: var(--white); }
+.pricing-note {
+  text-align: center; font-size: 13px; color: var(--gray-500); margin-top: 20px;
+}
+
+/* RESULTS */
+.results-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; }
+.result-card { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius-md); padding: 28px 22px; }
+.result-icon { font-size: 32px; margin-bottom: 12px; display: block; }
+.result-card h4 { margin-bottom: 8px; }
+
+/* FAQ */
+.faq-layout { display: grid; grid-template-columns: 320px 1fr; gap: 64px; align-items: start; }
+.faq-layout h2 { margin-top: 10px; }
+.faq-list { display: flex; flex-direction: column; gap: 0; }
+.faq-item {
+  border-bottom: 1px solid var(--gray-200); padding: 0;
+}
+.faq-item summary {
+  padding: 18px 0; font-size: 16px; font-weight: 600; color: var(--black);
+  cursor: pointer; list-style: none; display: flex; justify-content: space-between;
+  align-items: center;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: '+'; font-size: 20px; color: var(--gray-500); }
+.faq-item[open] summary::after { content: '−'; }
+.faq-item p { padding-bottom: 16px; font-size: 15px; }
+
+@media (max-width: 1000px) {
+  .aanpak-grid { grid-template-columns: repeat(2,1fr); }
+  .pricing-grid { grid-template-columns: 1fr; }
+  .pricing-card--popular { transform: none; }
+  .results-grid { grid-template-columns: repeat(2,1fr); }
+  .faq-layout { grid-template-columns: 1fr; gap: 32px; }
+}
+@media (max-width: 560px) {
+  .aanpak-grid { grid-template-columns: 1fr; }
+  .results-grid { grid-template-columns: 1fr; }
 }
 </style>

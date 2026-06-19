@@ -1,0 +1,294 @@
+---
+// src/components/Hero.astro
+---
+
+<section class="hero">
+  <div class="container hero__inner">
+
+    <!-- Tekst links -->
+    <div class="hero__content">
+      <p class="eyebrow">Jouw zichtbaarheidspartner in Twente</p>
+
+      <h1 class="hero__title">
+        Kies online zichtbaarheid<br />
+        en straal professionaliteit uit
+      </h1>
+
+      <p class="hero__body">
+        Peter Rutgers helpt ondernemers in Twente om online meer op te vallen.
+        Van een sterke website tot social media die écht werkt —
+        <strong>voor een vaste prijs per maand.</strong>
+        Niet tevreden? Dan stoppen we gewoon.
+      </p>
+
+      <ul class="check-list">
+        <li>Professionele aanwezigheid op social media in Twente</li>
+        <li>Websites die gevonden worden én converteren</li>
+        <li>Persoonlijk contact — jij belt Peter, niet een helpdesk</li>
+      </ul>
+
+      <div class="hero__actions">
+        <a href="/contact" class="btn-primary">Gratis kennismaking</a>
+        <a href="/diensten" class="btn-outline">Bekijk diensten</a>
+      </div>
+
+      <div class="hero__trust">
+        <div class="hero__trust-item">
+          <span class="hero__trust-stars" aria-label="5 sterren">★★★★★</span>
+          <span class="hero__trust-label">Beoordeeld door Twentse ondernemers</span>
+        </div>
+        <div class="hero__trust-cities">
+          Nijverdal · Almelo · Hengelo · Enschede &amp; heel Twente
+        </div>
+      </div>
+    </div>
+
+    <!-- Foto rechts in cirkel -->
+    <div class="hero__visual">
+      <div class="hero__img-blob">
+        <img
+          src="https://www.peterrutgersmedia.nl/wp-content/uploads/2026/03/Oale_ste_opening-06032026-93.jpg"
+          alt="Peter Rutgers aan het werk in Twente"
+          loading="eager"
+          width="520"
+          height="520"
+        />
+      </div>
+      <!-- Kleine trust badges op foto -->
+      <div class="hero__badge hero__badge--top">
+        <span class="hero__badge-stars">★★★★★</span>
+        <span class="hero__badge-text">Twente's zichtbaarheidspartner</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Stats balk onderaan hero -->
+  <div class="hero__stats">
+    <div class="container">
+      <ul class="hero__stats-list">
+        <li class="hero__stat">
+          <strong>2+</strong>
+          <span>Jaar ervaring</span>
+        </li>
+        <li class="hero__stat-divider" aria-hidden="true"></li>
+        <li class="hero__stat">
+          <strong>Social + Websites</strong>
+          <span>Twee diensten, één partner</span>
+        </li>
+        <li class="hero__stat-divider" aria-hidden="true"></li>
+        <li class="hero__stat">
+          <strong>Twente</strong>
+          <span>Jouw regio, mijn thuis</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    background: var(--geel);
+    padding-top: var(--space-2xl);
+    padding-bottom: 0;
+    overflow: hidden;
+  }
+
+  .hero__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    align-items: center;
+    padding-bottom: var(--space-xl);
+  }
+
+  .hero__title {
+    font-size: var(--font-size-hero);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--zwart);
+    margin-bottom: var(--space-md);
+  }
+
+  .hero__body {
+    font-size: 1.05rem;
+    color: var(--donkergrijs);
+    max-width: 48ch;
+    margin-bottom: 0.25rem;
+  }
+
+  .hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: var(--space-md);
+  }
+
+  .hero__trust {
+    margin-top: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+  }
+
+  .hero__trust-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .hero__trust-stars {
+    color: #F59E0B;
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+
+  .hero__trust-label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--donkergrijs);
+  }
+
+  .hero__trust-cities {
+    font-size: 0.82rem;
+    color: var(--middelgrijs);
+  }
+
+  /* Foto visueel */
+  .hero__visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .hero__img-blob {
+    width: 460px;
+    height: 460px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: rgba(0,0,0,0.08);
+    flex-shrink: 0;
+  }
+
+  .hero__img-blob img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  /* Badge op foto */
+  .hero__badge {
+    position: absolute;
+    background: var(--wit);
+    border-radius: var(--radius-md);
+    padding: 0.625rem 0.875rem;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+  }
+
+  .hero__badge--top {
+    bottom: 2.5rem;
+    right: -0.5rem;
+  }
+
+  .hero__badge-stars {
+    color: #F59E0B;
+    font-size: 0.85rem;
+  }
+
+  .hero__badge-text {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--donkergrijs);
+    max-width: 130px;
+    line-height: 1.3;
+  }
+
+  /* Stats balk */
+  .hero__stats {
+    background: rgba(0,0,0,0.07);
+    padding: 1.25rem 0;
+    margin-top: 0;
+  }
+
+  .hero__stats-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    flex-wrap: wrap;
+  }
+
+  .hero__stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.125rem;
+    padding: 0.375rem 2rem;
+  }
+
+  .hero__stat strong {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--zwart);
+  }
+
+  .hero__stat span {
+    font-size: 0.8rem;
+    color: rgba(0,0,0,0.55);
+  }
+
+  .hero__stat-divider {
+    width: 1px;
+    height: 32px;
+    background: rgba(0,0,0,0.2);
+    flex-shrink: 0;
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .hero__inner {
+      grid-template-columns: 1fr;
+      gap: var(--space-lg);
+    }
+
+    .hero__visual {
+      order: -1;
+      justify-content: center;
+    }
+
+    .hero__img-blob {
+      width: 280px;
+      height: 280px;
+    }
+
+    .hero__badge--top {
+      right: 0.5rem;
+      bottom: 0;
+    }
+
+    .hero__stats-list {
+      gap: 0;
+    }
+
+    .hero__stat {
+      padding: 0.375rem 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero__stat-divider {
+      display: none;
+    }
+
+    .hero__stats-list {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+</style>

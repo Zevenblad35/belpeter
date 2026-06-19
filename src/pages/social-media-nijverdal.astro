@@ -1,0 +1,211 @@
+---
+// Lokale landingspagina template — Social Media [Stad]
+// Gebruik: kopieer dit bestand en pas de variabelen aan
+import Layout from '../../layouts/Layout.astro';
+
+const stad = "Nijverdal";
+const stadSlug = "nijverdal";
+const regio = "Twente";
+const omliggend = "Hellendoorn, Wierden en omgeving";
+---
+<Layout
+  title={`Social Media Beheer ${stad} — Meer Klanten Online | Bel Peter`}
+  description={`Peter Rutgers verzorgt social media beheer voor ondernemers in ${stad}. Professionele aanwezigheid op Instagram, LinkedIn en Facebook. Gratis kennismaking.`}
+  canonical={`https://belpeter.nl/social-media-${stadSlug}/`}
+>
+
+<!-- ─── HERO ───────────────────────────────── -->
+<section class="local-hero">
+  <div class="container">
+    <div class="local-hero-inner">
+      <div class="local-hero-text">
+        <span class="eyebrow">Social Media beheer in {stad}</span>
+        <h1>Online zichtbaar<br>in {stad}?</h1>
+        <p>Peter Rutgers helpt ondernemers in {stad}, {omliggend} om meer klanten te bereiken via social media. Lokale kennis, professionele aanpak.</p>
+        <ul class="check-list" style="margin-bottom:28px">
+          <li>Lokale kennis van {stad} en {regio}</li>
+          <li>Instagram, LinkedIn & Facebook beheer</li>
+          <li>Content die aansluit bij jouw doelgroep</li>
+          <li>Maand-op-maand opzegbaar</li>
+        </ul>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a href="/contact" class="btn btn-primary">Gratis kennismaking</a>
+          <a href="/diensten/social-media" class="btn btn-outline">Bekijk pakketten</a>
+        </div>
+      </div>
+      <div class="local-hero-badge">
+        <div class="local-badge">
+          <span class="local-badge-icon" aria-hidden="true">📍</span>
+          <strong>{stad}</strong>
+          <span>{regio}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── LOKALE CONTEXT ─────────────────────── -->
+<section class="section bg-white">
+  <div class="container">
+    <div class="local-intro">
+      <div>
+        <span class="eyebrow">Lokale aanpak</span>
+        <h2>Social media voor ondernemers<br>in {stad} en omgeving</h2>
+        <p>Als Twentenaar kent Peter de lokale markt. Wij begrijpen wat klanten in {stad} zoeken, welke toon aanslaat en welke content werkt voor jouw branche en regio.</p>
+        <p style="margin-top:12px">Of je nu een horecazaak runt in het centrum, een bouwbedrijf in de omgeving, of een praktijk aan de rand van {stad} — Peter maakt content die aansluit bij jouw lokale klanten.</p>
+      </div>
+      <div class="local-usps">
+        <div class="local-usp">
+          <div class="usp-icon" aria-hidden="true">🏡</div>
+          <div>
+            <strong>Lokale partner</strong>
+            <p>Peter werkt en leeft in {regio}. Geen bureau uit Amsterdam, maar een partner die jouw omgeving kent.</p>
+          </div>
+        </div>
+        <div class="local-usp">
+          <div class="usp-icon" aria-hidden="true">⚡</div>
+          <div>
+            <strong>Snel schakelen</strong>
+            <p>Direct contact met Peter. Geen tussenpersonen of lange wachttijden.</p>
+          </div>
+        </div>
+        <div class="local-usp">
+          <div class="usp-icon" aria-hidden="true">🎯</div>
+          <div>
+            <strong>Op maat</strong>
+            <p>Geen standaard pakket, maar een aanpak die past bij jouw bedrijf in {stad}.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PAKKETTEN ──────────────────────────── -->
+<section class="section bg-gray">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Pakketten voor {stad}</span>
+      <h2>Kies wat past<br>bij jouw bedrijf</h2>
+    </div>
+    <div class="local-pricing">
+      <div class="pricing-card">
+        <h3>Starter</h3>
+        <div class="price"><strong>€ 199</strong><span>/ maand excl. btw</span></div>
+        <p class="price-desc">5 posts · 1 platform</p>
+        <ul class="check-list" style="margin:16px 0 24px">
+          <li>Contentplan</li>
+          <li>Tekst & visuals</li>
+          <li>Publicatie & planning</li>
+        </ul>
+        <a href="/contact" class="btn btn-outline" style="width:100%;justify-content:center">Aanvragen</a>
+      </div>
+      <div class="pricing-card pricing-card--blue">
+        <div class="popular-tag">Populair in {stad}</div>
+        <h3>Groei</h3>
+        <div class="price"><strong>€ 349</strong><span>/ maand excl. btw</span></div>
+        <p class="price-desc">16 posts · 2 platformen</p>
+        <ul class="check-list" style="margin:16px 0 24px">
+          <li>Strategie & contentplan</li>
+          <li>Tekst, visuals & Reels</li>
+          <li>Community management</li>
+          <li>Maandelijkse rapportage</li>
+        </ul>
+        <a href="/contact" class="btn btn-primary" style="width:100%;justify-content:center">Aanvragen</a>
+      </div>
+      <div class="pricing-card">
+        <h3>Op maat</h3>
+        <div class="price"><strong>Offerte</strong></div>
+        <p class="price-desc">Alle platformen · Volledig ontzorgd</p>
+        <ul class="check-list" style="margin:16px 0 24px">
+          <li>Alle platformen</li>
+          <li>Advertentiebeheer</li>
+          <li>Volledige ontzorging</li>
+        </ul>
+        <a href="/contact" class="btn btn-outline" style="width:100%;justify-content:center">Offerte aanvragen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── WERKGEBIED ─────────────────────────── -->
+<section class="section bg-white">
+  <div class="container" style="text-align:center;max-width:640px">
+    <span class="eyebrow">Werkgebied</span>
+    <h2>Peter werkt in heel {regio}</h2>
+    <p>Naast {stad} is Peter actief in het gehele Twente-gebied. Neem contact op voor een gratis gesprek over social media voor jouw bedrijf.</p>
+    <div class="steden-grid">
+      <a href="/social-media-nijverdal" class="stad-link {stadSlug === 'nijverdal' ? 'active' : ''}">Nijverdal</a>
+      <a href="/social-media-almelo" class="stad-link {stadSlug === 'almelo' ? 'active' : ''}">Almelo</a>
+      <a href="/social-media-hengelo" class="stad-link {stadSlug === 'hengelo' ? 'active' : ''}">Hengelo</a>
+      <a href="/social-media-enschede" class="stad-link {stadSlug === 'enschede' ? 'active' : ''}">Enschede</a>
+      <a href="/social-media-wierden" class="stad-link {stadSlug === 'wierden' ? 'active' : ''}">Wierden</a>
+      <a href="/social-media-rijssen" class="stad-link {stadSlug === 'rijssen' ? 'active' : ''}">Rijssen</a>
+    </div>
+    <a href="/contact" class="btn btn-primary" style="margin-top:28px">Kennismaking plannen</a>
+  </div>
+</section>
+
+</Layout>
+
+<style>
+.local-hero { background: var(--yellow); padding: 80px 0 72px; }
+.local-hero-inner {
+  max-width: var(--container); margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 280px;
+  gap: 48px; align-items: center;
+}
+.local-hero-text h1 { margin: 10px 0 16px; }
+.local-hero-text p  { font-size: 17px; margin-bottom: 20px; }
+.local-badge {
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  background: var(--white); border-radius: var(--radius-lg);
+  padding: 32px; text-align: center; box-shadow: var(--shadow-md);
+}
+.local-badge-icon { font-size: 48px; }
+.local-badge strong { font-size: 28px; font-weight: 900; color: var(--black); }
+.local-badge span   { font-size: 14px; color: var(--gray-500); }
+
+.local-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+.local-intro h2 { margin: 10px 0 16px; }
+.local-usps { display: flex; flex-direction: column; gap: 20px; }
+.local-usp { display: flex; align-items: flex-start; gap: 14px; }
+.usp-icon {
+  font-size: 24px; width: 48px; height: 48px;
+  background: var(--yellow); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.local-usp strong { font-size: 15px; color: var(--black); display: block; margin-bottom: 4px; }
+
+.local-pricing { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.pricing-card {
+  background: var(--white); border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-lg); padding: 28px 24px; position: relative;
+}
+.pricing-card--blue { border-color: var(--blue); box-shadow: var(--shadow-md); }
+.popular-tag {
+  position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
+  background: var(--blue); color: var(--white);
+  font-size: 12px; font-weight: 700; padding: 3px 14px; border-radius: var(--radius-pill); white-space: nowrap;
+}
+.pricing-card h3 { font-size: 20px; margin-bottom: 8px; }
+.price { display: flex; align-items: baseline; gap: 6px; margin-bottom: 4px; }
+.price strong { font-size: 28px; font-weight: 900; color: var(--black); }
+.price span { font-size: 13px; color: var(--gray-500); }
+.price-desc { font-size: 13px; color: var(--gray-500); }
+
+.steden-grid { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 24px; }
+.stad-link {
+  padding: 8px 18px; border-radius: var(--radius-pill);
+  border: 1.5px solid var(--gray-200); font-size: 14px; font-weight: 500;
+  color: var(--black); transition: all .15s;
+}
+.stad-link:hover, .stad-link.active { border-color: var(--blue); background: var(--blue-section); color: var(--blue-dark); }
+
+@media (max-width: 900px) {
+  .local-hero-inner { grid-template-columns: 1fr; }
+  .local-hero-badge { display: none; }
+  .local-intro { grid-template-columns: 1fr; }
+  .local-pricing { grid-template-columns: 1fr; }
+}
+</style>
