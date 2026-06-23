@@ -1,0 +1,76 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout title="Diensten — Social Media & Websites in Twente | Bel Peter" description="Peter helpt bedrijven in Twente met social media beheer en professionele websites. Bekijk alle diensten en pakketten." canonical="https://belpeter.nl/diensten/">
+
+<section class="ph"><div class="container"><span class="eyebrow">Diensten</span><h1>Online zichtbaarheid<br>in Twente</h1><p>Peter richt zich op twee diensten die jouw online aanwezigheid versterken: social media en websites. Samen of apart — altijd op maat voor jouw bedrijf in Twente.</p></div></section>
+
+<section class="section bg-white"><div class="container">
+  <div class="svc-block">
+    <div class="svc-num">01</div>
+    <div class="svc-txt">
+      <span class="eyebrow">Social Media</span>
+      <h2>Een consistente aanwezigheid<br>die klanten aantrekt</h2>
+      <p>Een consistente aanwezigheid op social media bouwt vertrouwen en trekt klanten aan. Peter regelt de strategie én de uitvoering — jij hoeft er niet naar om te kijken.</p>
+      <ul class="check-list svc-list"><li>Social media strategie op maat</li><li>Contentcreatie & copywriting</li><li>Beheer van Instagram, LinkedIn & Facebook</li><li>Reels & video content</li><li>Community management</li><li>Maandelijkse rapportage</li></ul>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px">
+        <a href="/diensten/social-media" class="btn btn-primary">Bekijk pakketten & prijzen</a>
+        <a href="/contact" class="btn btn-outline">Gratis kennismaking</a>
+      </div>
+    </div>
+    <div class="svc-icon"><div class="icon-blob">📱</div><div class="plat-list"><span>Instagram</span><span>LinkedIn</span><span>Facebook</span></div></div>
+  </div>
+</div></section>
+
+<section class="section bg-blue"><div class="container">
+  <div class="svc-block svc-block--rev">
+    <div class="svc-num">02</div>
+    <div class="svc-icon"><div class="icon-blob icon-blob--w">💻</div><div class="plat-list"><span>SEO-proof</span><span>Snel & veilig</span><span>Mobielvriendelijk</span></div></div>
+    <div class="svc-txt">
+      <span class="eyebrow">Websites</span>
+      <h2>Jouw digitale visitekaartje<br>én beste verkoper</h2>
+      <p>Je website is jouw digitale visitekaartje én je beste verkoper. Peter bouwt websites die gevonden worden en bezoekers omzetten in klanten — ook lokaal in Twente.</p>
+      <ul class="check-list svc-list"><li>Op maat gemaakte websites</li><li>SEO-optimalisatie voor lokale vindbaarheid</li><li>Snel, veilig en mobielvriendelijk</li><li>CMS voor eigen beheer</li><li>Google Analytics koppeling</li><li>Onderhoud en support</li></ul>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px">
+        <a href="/diensten/websites" class="btn btn-primary">Bekijk pakketten & prijzen</a>
+        <a href="/contact" class="btn btn-outline">Gratis kennismaking</a>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section class="section-sm bg-white"><div class="container">
+  <div class="foto-card">
+    <div><h3>Op zoek naar bedrijfsfotografie in Twente?</h3><p>Peter werkt ook als fotograaf via fotograafpeter.nl — voor portretten, producten en sfeerreportages.</p></div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;flex-shrink:0">
+      <a href="https://fotograafpeter.nl" class="btn btn-dark" target="_blank" rel="noopener">Naar fotograafpeter.nl</a>
+      <a href="/diensten/fotografie" class="btn btn-outline">Meer info</a>
+    </div>
+  </div>
+</div></section>
+
+<section class="section bg-gray"><div class="container" style="text-align:center;max-width:600px">
+  <span class="eyebrow">Weet je nog niet wat je nodig hebt?</span>
+  <h2>Plan een gratis kennismaking</h2>
+  <p>Peter denkt graag mee over de beste aanpak voor jouw situatie.</p>
+  <a href="/contact" class="btn btn-primary" style="margin-top:28px">Gratis kennismaking</a>
+</div></section>
+
+</Layout>
+<style>
+.ph{background:#F5C518;padding:80px 0 72px;text-align:center}
+.ph h1{margin:10px 0 16px}.ph p{font-size:18px;max-width:580px;margin:0 auto}
+.svc-block{display:grid;grid-template-columns:48px 1fr 280px;gap:40px;align-items:start}
+.svc-block--rev{grid-template-columns:48px 280px 1fr}
+.svc-num{font-size:80px;font-weight:900;color:rgba(0,0,0,.06);line-height:1;letter-spacing:-4px;padding-top:8px}
+.svc-txt h2{margin:10px 0 16px}.svc-txt p{margin-bottom:20px}
+.svc-list{margin-bottom:0}
+.svc-icon{display:flex;flex-direction:column;align-items:center;gap:14px;padding-top:8px}
+.icon-blob{width:160px;height:160px;border-radius:50%;background:#F5C518;display:flex;align-items:center;justify-content:center;font-size:64px}
+.icon-blob--w{background:#fff}
+.plat-list{display:flex;flex-direction:column;gap:6px;width:100%}
+.plat-list span{background:#fff;border:1px solid var(--gray-200);border-radius:var(--r-pill);padding:6px 14px;font-size:13px;font-weight:600;color:#1a1a1a;text-align:center;box-shadow:var(--sh-sm)}
+.foto-card{background:#F5C518;border-radius:var(--r-md);padding:32px 36px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.foto-card h3{margin-bottom:8px;font-size:22px}.foto-card p{font-size:15px}
+@media(max-width:900px){.svc-block,.svc-block--rev{grid-template-columns:1fr}.svc-num{font-size:48px}.svc-icon{display:none}.foto-card{flex-direction:column}}
+</style>

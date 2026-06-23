@@ -1,0 +1,51 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout title="Bedrijfsfotografie Twente — Professionele Foto's | Bel Peter" description="Professionele bedrijfsfotografie door Peter Rutgers in Twente. Portretten, productfotografie en sfeerreportages voor ondernemers in Nijverdal, Almelo, Hengelo en omgeving." canonical="https://belpeter.nl/diensten/fotografie/">
+
+<section class="ph"><div class="container"><span class="eyebrow">Dienst — Fotografie</span><h1>Beelden die jouw<br>verhaal vertellen</h1><p>Professionele bedrijfsfotografie voor ondernemers in Twente. Van portretfoto tot sfeerreportage — beelden die je trots op bent en die je klanten aanspreken.</p><div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap"><a href="/contact" class="btn btn-primary">Fotoshoot aanvragen</a><a href="https://fotograafpeter.nl" class="btn btn-outline" target="_blank" rel="noopener">Naar fotograafpeter.nl →</a></div></div></section>
+
+<section class="section bg-white"><div class="container">
+  <div class="section-header"><span class="eyebrow">Wat Peter maakt</span><h2>Fotografie voor elk doel</h2></div>
+  <div class="ftyp-g">
+    <div class="card ftyp-c"><span style="font-size:36px;display:block;margin-bottom:12px">👤</span><h4>Zakelijke portretten</h4><p>Professionele profielfoto's voor LinkedIn, jouw website en marketing materiaal. Persoonlijk en authentiek.</p></div>
+    <div class="card ftyp-c"><span style="font-size:36px;display:block;margin-bottom:12px">🏢</span><h4>Bedrijfsreportage</h4><p>Sfeerbeelden van jouw werkplek, team en processen. Laat zien wie je bent en hoe je werkt.</p></div>
+    <div class="card ftyp-c"><span style="font-size:36px;display:block;margin-bottom:12px">📦</span><h4>Productfotografie</h4><p>Scherpe, aantrekkelijke productfoto's voor jouw webshop, brochure of social media.</p></div>
+    <div class="card ftyp-c"><span style="font-size:36px;display:block;margin-bottom:12px">🎉</span><h4>Evenementenfotografie</h4><p>Openingen, jubilea, bijeenkomsten — Peter legt de sfeer en de mooiste momenten vast.</p></div>
+  </div>
+</div></section>
+
+<section class="section bg-gray"><div class="container">
+  <div class="section-header"><span class="eyebrow">Portfolio</span><h2>Recente opdrachten in Twente</h2></div>
+  <div class="port-g">
+    <div class="port-c"><img src="https://www.peterrutgersmedia.nl/wp-content/uploads/2026/03/Oale_ste_opening-06032026-93.jpg" alt="Evenement fotografie Twente" loading="lazy"/><div class="port-l">Evenementenfotografie · Nijverdal</div></div>
+    <div class="port-c"><img src="https://www.peterrutgersmedia.nl/wp-content/uploads/2026/04/1-819x1024.jpg" alt="Bedrijfsreportage Twente" loading="lazy"/><div class="port-l">Bedrijfsreportage · Twente</div></div>
+    <div class="port-c"><img src="https://www.peterrutgersmedia.nl/wp-content/uploads/2026/02/preventie-bestrijding-beljoost-384x480.png" alt="Social media fotografie" loading="lazy"/><div class="port-l">Social Media Content</div></div>
+  </div>
+  <p style="text-align:center;margin-top:24px"><a href="https://fotograafpeter.nl" class="btn btn-outline" target="_blank" rel="noopener">Bekijk volledig portfolio op fotograafpeter.nl →</a></p>
+</div></section>
+
+<section class="section bg-yellow"><div class="container" style="text-align:center;max-width:620px">
+  <span style="font-size:64px;display:block;margin-bottom:20px" aria-hidden="true">📸</span>
+  <h2>Meer weten over fotografie?</h2>
+  <p style="font-size:17px;margin:14px 0 28px">Peter heeft een speciale website voor zijn fotografiewerk: <strong>fotograafpeter.nl</strong>. Daar vind je het volledige portfolio, tarieven en meer informatie over een samenwerking.</p>
+  <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+    <a href="https://fotograafpeter.nl" class="btn btn-dark" target="_blank" rel="noopener">Naar fotograafpeter.nl</a>
+    <a href="/contact" class="btn btn-outline">Fotoshoot aanvragen</a>
+  </div>
+</div></section>
+
+</Layout>
+<style>
+.ph{background:#F5C518;padding:80px 0 72px;text-align:center}
+.ph h1{margin:10px 0 16px}.ph p{font-size:18px;max-width:560px;margin:0 auto 28px}
+.ftyp-g{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.ftyp-c h4{margin-bottom:8px}
+.port-g{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.port-c{border-radius:var(--r-md);overflow:hidden;position:relative;aspect-ratio:3/4;box-shadow:var(--sh-sm)}
+.port-c img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.port-c:hover img{transform:scale(1.03)}
+.port-l{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.72));color:#fff;font-size:14px;font-weight:600;padding:36px 16px 16px}
+@media(max-width:900px){.ftyp-g{grid-template-columns:repeat(2,1fr)}.port-g{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.ftyp-g{grid-template-columns:1fr}.port-g{grid-template-columns:1fr}}
+</style>

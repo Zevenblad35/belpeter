@@ -1,0 +1,29 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout title="Blog — Marketing Tips voor Twentse Ondernemers | Bel Peter" description="Praktische tips en inzichten over social media, websites en online zichtbaarheid voor ondernemers in Twente." canonical="https://belpeter.nl/blog/">
+
+<section class="ph"><div class="container"><span class="eyebrow">Blog</span><h1>Marketing tips voor<br>Twentse ondernemers</h1><p>Praktische inzichten over social media, websites en online zichtbaarheid — speciaal voor ondernemers in Twente.</p></div></section>
+
+<section class="section bg-white"><div class="container">
+  <div class="blog-g">
+    <article class="blog-c"><div class="blog-tag">Social Media</div><h3><a href="/blog/social-media-tips-twente">5 social media tips voor ondernemers in Twente</a></h3><p>Hoe zorg je voor een consistente aanwezigheid op social media als ondernemer? Peter deelt zijn beste tips voor bedrijven in Nijverdal en omgeving.</p><a href="/blog/social-media-tips-twente" class="blog-link">Lees meer →</a></article>
+    <article class="blog-c"><div class="blog-tag">Websites</div><h3><a href="/blog/website-laten-maken-twente-tips">Wat kost een website laten maken in Twente?</a></h3><p>Een eerlijk overzicht van de kosten voor een professionele website in Twente. Van eenvoudig tot uitgebreid — wat past bij jouw bedrijf?</p><a href="/blog/website-laten-maken-twente-tips" class="blog-link">Lees meer →</a></article>
+    <article class="blog-c"><div class="blog-tag">SEO</div><h3><a href="/blog/lokale-seo-twente">Lokale SEO voor Twentse bedrijven: zo word je gevonden</a></h3><p>Google je doelgroep zoekt lokaal. Hoe zorg je dat jouw bedrijf in Nijverdal, Almelo of Hengelo bovenaan staat? Peter legt het uit.</p><a href="/blog/lokale-seo-twente" class="blog-link">Lees meer →</a></article>
+  </div>
+</div></section>
+
+</Layout>
+<style>
+.ph{background:#F5C518;padding:80px 0 72px;text-align:center}
+.ph h1{margin:10px 0 16px}.ph p{font-size:18px;max-width:560px;margin:0 auto}
+.blog-g{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.blog-c{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--r-md);padding:28px 24px}
+.blog-tag{display:inline-block;background:#F5C518;color:#1a1a1a;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:3px 12px;border-radius:var(--r-pill);margin-bottom:12px}
+.blog-c h3{font-size:18px;margin-bottom:10px;line-height:1.3}
+.blog-c h3 a{color:#1a1a1a}.blog-c h3 a:hover{color:var(--blue)}
+.blog-c p{font-size:14px;margin-bottom:16px}
+.blog-link{font-size:14px;font-weight:600;color:var(--blue)}
+@media(max-width:900px){.blog-g{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.blog-g{grid-template-columns:1fr}}
+</style>
